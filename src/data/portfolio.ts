@@ -3,52 +3,38 @@ import { Project, Skill, Experience, Certification, SocialLink } from '../types/
 export const projects: Project[] = [
   {
     id: '1',
-    title: 'Porpeto Web',
-    description: 'A modern web application built with React and Node.js, featuring real-time data synchronization and responsive design.',
-    techStack: ['React', 'Node.js', 'MongoDB'],
-    image: 'https://images.pexels.com/photos/1779487/pexels-photo-1779487.jpeg?auto=compress&cs=tinysrgb&w=800',
-    category: 'SaaS/Driver'
+    title: 'RefriAlaska',
+    description: 'A modern web application built with Html, Css and JavaScript, featuring real-time data synchronization and responsive design.',
+    techStack: ['HTML', 'CSS', 'JavaScript'],
+    image: 'src/Sources/RefriAlaska Projecto.png',
+    category: 'Website Corporativo'
+     
   },
   {
     id: '2',
-    title: 'App Maul',
+    title: 'BogoSpots ',
     description: 'E-commerce mobile application with advanced search capabilities and seamless checkout experience.',
-    techStack: ['React Native', 'Firebase', 'Stripe'],
+    techStack: ['React', 'PostgreSQL', 'Tailwind','Vue.JS'],
     image: 'https://images.pexels.com/photos/1092644/pexels-photo-1092644.jpeg?auto=compress&cs=tinysrgb&w=800',
-    category: 'SaaS/Driver'
+    category: 'Full-stack web application'
   },
   {
     id: '3',
-    title: 'Tienda E-commerce',
-    description: 'Full-stack e-commerce platform with inventory management, payment processing, and admin dashboard.',
-    techStack: ['Next.js', 'PostgreSQL', 'Tailwind'],
-    image: 'https://images.pexels.com/photos/230544/pexels-photo-230544.jpeg?auto=compress&cs=tinysrgb&w=800',
+    title: 'In development',
+    description: 'web project in progress',
+    techStack: ['...', '...', '...'],
+    image: 'src/Sources/AppenProgreso.avif',
     category: 'SaaS/Driver'
   },
   {
     id: '4',
-    title: 'Dashboard',
-    description: 'Analytics dashboard with real-time data visualization, custom charts, and export functionality.',
+    title: 'In development',
+    description: 'web project in progress',
     techStack: ['React', 'D3.js', 'AWS'],
-    image: 'https://images.pexels.com/photos/265087/pexels-photo-265087.jpeg?auto=compress&cs=tinysrgb&w=800',
-    category: 'SaaS/Driver'
+    image: 'src/Sources/AppEnProceso2.avif',
+    category: 'Web Project'
   },
-  {
-    id: '5',
-    title: 'Tyul Pases',
-    description: 'Travel booking platform with integrated payment system and booking management.',
-    techStack: ['Vue.js', 'Express', 'MySQL'],
-    image: 'https://images.pexels.com/photos/1008155/pexels-photo-1008155.jpeg?auto=compress&cs=tinysrgb&w=800',
-    category: 'SaaS/Driver'
-  },
-  {
-    id: '6',
-    title: 'Bogo Packagi',
-    description: 'Package tracking and logistics management system with real-time updates.',
-    techStack: ['Angular', 'Spring Boot', 'Docker'],
-    image: 'https://images.pexels.com/photos/4246120/pexels-photo-4246120.jpeg?auto=compress&cs=tinysrgb&w=800',
-    category: 'SaaS/Driver'
-  }
+  
 ];
 
 export const skills: Skill[] = [

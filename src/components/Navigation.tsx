@@ -57,7 +57,7 @@ const Navigation = () => {
               </button>
             ))}
             <button className="px-6 py-2 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-lg hover:shadow-lg hover:shadow-cyan-500/50 transition-all duration-300">
-              Hire Me
+              Download CV
             </button>
           </div>
 
