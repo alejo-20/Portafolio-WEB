@@ -15,7 +15,7 @@ export const projects: Project[] = [
     title: 'BogoSpots ',
     description: 'E-commerce mobile application with advanced search capabilities and seamless checkout experience.',
     techStack: ['React', 'PostgreSQL', 'Tailwind','Vue.JS'],
-    image: 'https://images.pexels.com/photos/1092644/pexels-photo-1092644.jpeg?auto=compress&cs=tinysrgb&w=800',
+    image: 'src/Sources/Landing BogoSpots.png',
     category: 'Full-stack web application'
   },
   {

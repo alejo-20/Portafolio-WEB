@@ -129,7 +129,7 @@ const Contact = () => {
                     <input
                       type="text"
                       className="w-full px-4 py-3 bg-slate-800/50 border border-cyan-500/20 rounded-lg text-white placeholder-gray-500 focus:outline-none focus:border-cyan-400/50 focus:ring-1 focus:ring-cyan-400/50 transition-all duration-300"
-                      placeholder="Alejandro Casquete"
+                      placeholder="Your name"
                     />
                   </div>
 
