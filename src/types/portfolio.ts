@@ -1,3 +1,5 @@
+import { IconType } from "react-icons";
+
 export interface Project {
   id: string;
   title: string;
@@ -11,7 +13,8 @@ export interface Skill {
   name: string;
   category: string;
   level: number;
-  icon?: string;
+  icon?: IconType;
+  color?: string;
 }
 
 export interface Experience {

@@ -10,10 +10,10 @@ const Hero = () => {
   //Portatil imagen
   const codeSnippets = [
     "const developer = {",
-    "  name: 'Alejandro Casquete ',",
-    "  role: 'Junior Developer',",
+    "  name: 'Doncan Alejandro Casquete ',",
+    "  role: 'Junior Developer | QA Tester',",
     "  skills: ['React', 'Node.js', 'AWS'],",
-    "  passion: 'Building great products',",
+    "  passion: 'Driven by continuous growth and learning',",
     "  availability: 'Open to opportunities'",
     "};",
   ];
@@ -39,9 +39,9 @@ const Hero = () => {
               Alejandro Casquete 
             </span>
           </h1>
-          <p className="text-xl sm:text-2xl md:text-3xl text-gray-300 mb-4">Junior Developer</p>
+          <p className="text-xl sm:text-2xl md:text-3xl text-gray-300 mb-4">Junior Developer | QA Tester </p>
           <p className="text-base sm:text-lg text-gray-400 max-w-2xl mx-auto">
-            Crafting elegant solutions to complex problems
+            Developing reliable software through code and quality testing
           </p>
         </div>
 
@@ -100,7 +100,7 @@ const Hero = () => {
                       <span className="text-gray-400">Programming Languages:</span>
                     </div>
                     <div className="text-cyan-400 font-mono text-xs sm:text-sm">
-                      Python, JavaScript, C++
+                      Python, JavaScript, Java
                     </div>
 
                     <div className="flex items-center space-x-2 text-xs sm:text-sm mt-3">

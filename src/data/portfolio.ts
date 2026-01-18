@@ -1,4 +1,7 @@
+import { SiTypescript, SiJavascript, SiPython, SiPostgresql, SiMongodb, SiTailwindcss, SiVuedotjs, SiNextdotjs, SiExpress, SiHtml5, SiCss3 } from "react-icons/si";
 import { Project, Skill, Experience, Certification, SocialLink } from '../types/portfolio';
+import { FaReact, FaNodeJs, FaGit, FaDocker, FaAws, FaGithub } from "react-icons/fa";
+
 
 export const projects: Project[] = [
   {
@@ -38,22 +41,24 @@ export const projects: Project[] = [
 ];
 
 export const skills: Skill[] = [
-  { name: 'JavaScript', category: 'Languages', level: 95 },
-  { name: 'TypeScript', category: 'Languages', level: 90 },
-  { name: 'Python', category: 'Languages', level: 85 },
-  { name: 'C++', category: 'Languages', level: 75 },
-  { name: 'React', category: 'Frontend', level: 95 },
-  { name: 'Next.js', category: 'Frontend', level: 88 },
-  { name: 'Vue.js', category: 'Frontend', level: 80 },
-  { name: 'Tailwind CSS', category: 'Frontend', level: 92 },
-  { name: 'Node.js', category: 'Backend', level: 90 },
-  { name: 'Express', category: 'Backend', level: 88 },
-  { name: 'PostgreSQL', category: 'Database', level: 85 },
-  { name: 'MongoDB', category: 'Database', level: 82 },
-  { name: 'AWS', category: 'DevOps', level: 78 },
-  { name: 'Docker', category: 'DevOps', level: 80 },
-  { name: 'Git', category: 'Tools', level: 93 }
+  { name: 'HTML5', category: 'Frontend', level: 95, icon: SiHtml5, color: '#f76e1e' },
+  { name: 'CSS3', category: 'Frontend', level: 95, icon: SiCss3, color: '#2648df' },
+  { name: 'JavaScript', category: 'Languages', level: 95, icon: SiJavascript, color: '#F7DF1E' },
+  { name: 'TypeScript', category: 'Languages', level: 90, icon: SiTypescript, color: '#3178C6' },
+  { name: 'Python', category: 'Languages', level: 85, icon: SiPython, color: '#3776AB'  },
+  { name: 'React', category: 'Frontend', level: 95, icon: FaReact, color: '#61DAFB' },
+  { name: 'Next.js', category: 'Frontend', level: 88, icon: SiNextdotjs, color: '#FFFFFF' },
+  { name: 'Vue.js', category: 'Frontend', level: 80, icon: SiVuedotjs, color: '#42B883' },
+  { name: 'Tailwind CSS', category: 'Frontend', level: 92, icon: SiTailwindcss, color: '#38BDF8' },
+  { name: 'Node.js', category: 'Backend', level: 90, icon: FaNodeJs, color: '#339933' },
+  { name: 'Express', category: 'Backend', level: 88, icon: SiExpress, color: '#FFFFFF' },
+  { name: 'PostgreSQL', category: 'Database', level: 85, icon: SiPostgresql, color: '#336791' },
+  { name: 'MongoDB', category: 'Database', level: 82, icon: SiMongodb, color: '#47A248' },
+  { name: 'GitHub', category: 'Tools', level: 93, icon: FaGithub, color: '#000000' }
 ];
+
+
+
 
 export const experiences: Experience[] = [
   {

@@ -23,9 +23,9 @@ const About = () => {
   }, []);
 
   const stats = [
-    { icon: Code2, label: 'Projects Completed', value: '50+' },
-    { icon: Users, label: 'Happy Clients', value: '30+' },
-    { icon: Rocket, label: 'Years Experience', value: '5+' },
+    { icon: Code2, label: 'Projects Completed', value: '5+' },
+    { icon: Users, label: 'Happy Clients', value: '5+' },
+    { icon: Rocket, label: 'Years Experience', value: '1+' },
     { icon: Award, label: 'Certifications', value: '10+' }
   ];
 
@@ -48,19 +48,20 @@ const About = () => {
             </h2>
             <div className="space-y-4 text-gray-300 leading-relaxed">
               <p>
-                I'm a passionate Full Stack Developer with expertise in building modern web applications
-                that combine beautiful design with powerful functionality. With over 5 years of experience,
-                I've helped numerous clients bring their ideas to life.
+                I'm a Junior Software Developer and QA Tester passionate about building modern web applications and
+                reliable digital solutions. I'm currently studying Software Engineering and gaining hands-on experience
+                through real projects in web development, technical support, and software testing.
+                </p>
+              <p>
+                I focus on writing clean, maintainable code while continuously improving my skills in technologies like
+                JavaScript, React, Java, and Python. I enjoy learning new tools, solving problems, and understanding how
+                systems work both from the development and quality assurance perspectives.
               </p>
               <p>
-                My approach centers on writing clean, maintainable code while staying current with the
-                latest technologies and best practices. I believe in creating solutions that not only meet
-                requirements but exceed expectations.
+                When I'm not coding, you'll find me working on personal projects, exploring new technologies, improving
+                my portfolio, or learning more about software architecture and best practices.
               </p>
-              <p>
-                When I'm not coding, you'll find me exploring new technologies, contributing to open-source
-                projects, or sharing knowledge with the developer community.
-              </p>
+
             </div>
 
             <div className="mt-8 flex flex-wrap gap-4">
