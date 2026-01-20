@@ -16,10 +16,10 @@ export const projects: Project[] = [
   {
     id: '2',
     title: 'BogoSpots ',
-    description: 'E-commerce mobile application with advanced search capabilities and seamless checkout experience.',
+    description: 'A digital museum-type web platform where photographic spots of Bogotá D.C are discovered, documented and shared through user-generated content and curatorial validation.',
     techStack: ['React', 'PostgreSQL', 'Tailwind','Vue.JS'],
     image: 'src/Sources/Landing BogoSpots.png',
-    category: 'Full-stack web application'
+    category: 'Full-stack web application - In progress'
   },
   {
     id: '3',
@@ -43,83 +43,92 @@ export const projects: Project[] = [
 export const skills: Skill[] = [
   { name: 'HTML5', category: 'Frontend', level: 95, icon: SiHtml5, color: '#f76e1e' },
   { name: 'CSS3', category: 'Frontend', level: 95, icon: SiCss3, color: '#2648df' },
-  { name: 'JavaScript', category: 'Languages', level: 95, icon: SiJavascript, color: '#F7DF1E' },
-  { name: 'TypeScript', category: 'Languages', level: 90, icon: SiTypescript, color: '#3178C6' },
-  { name: 'Python', category: 'Languages', level: 85, icon: SiPython, color: '#3776AB'  },
+  { name: 'JavaScript', category: 'Frontend', level: 95, icon: SiJavascript, color: '#F7DF1E' },
   { name: 'React', category: 'Frontend', level: 95, icon: FaReact, color: '#61DAFB' },
-  { name: 'Next.js', category: 'Frontend', level: 88, icon: SiNextdotjs, color: '#FFFFFF' },
-  { name: 'Vue.js', category: 'Frontend', level: 80, icon: SiVuedotjs, color: '#42B883' },
   { name: 'Tailwind CSS', category: 'Frontend', level: 92, icon: SiTailwindcss, color: '#38BDF8' },
-  { name: 'Node.js', category: 'Backend', level: 90, icon: FaNodeJs, color: '#339933' },
-  { name: 'Express', category: 'Backend', level: 88, icon: SiExpress, color: '#FFFFFF' },
   { name: 'PostgreSQL', category: 'Database', level: 85, icon: SiPostgresql, color: '#336791' },
-  { name: 'MongoDB', category: 'Database', level: 82, icon: SiMongodb, color: '#47A248' },
-  { name: 'GitHub', category: 'Tools', level: 93, icon: FaGithub, color: '#000000' }
+  { name: 'MySQL', category: 'Database', level: 85, icon: SiPostgresql, color: '#336791' },
+  { name: 'ORACLE SQL', category: 'Database', level: 85, icon: SiPostgresql, color: '#336791' },
+  { name: 'Rest APIs', category: 'Backend', level: 82, icon: SiMongodb, color: '#47A248' },
+  { name: 'Git', category: 'Tools', level: 93, icon: FaGit, color: '#f17725' },
+  { name: 'GitHub', category: 'Tools', level: 93, icon: FaGithub, color: '#000000' },
+  { name: 'VS CODE', category: 'Tools', level: 93, icon: FaGithub, color: '#00ff4c' },
+  { name: 'POSTMAN', category: 'Tools', level: 93, icon: FaGithub, color: '#00ff62' },
+  { name: 'Agile / Scrum', category: 'Methodologies', level: 93, icon: FaGithub, color: '#00ff0d' },
 ];
 
 
-
-
+//Experiencia laboral
 export const experiences: Experience[] = [
-  {
-    company: 'Tech Innovations Inc.',
-    role: 'Senior Full Stack Developer',
-    period: '2022 - Present',
+ {
+    company: 'TeChrea',
+    role: 'Aprendiz IT / Tecnología',
+    period: 'April - October 2025',
     description: [
-      'Led development of microservices architecture serving 1M+ users',
-      'Implemented CI/CD pipelines reducing deployment time by 60%',
-      'Mentored junior developers and conducted code reviews'
+      'Support in the operation and maintenance of internal systems and enterprise applications.',
+      'Execution of basic SQL queries in Oracle databases for data validation and information verification.',
+      'First-level technical support and resolution of software and system-related incidents.',
+      'Execution of basic functional manual testing on an internal company application.',
+      'Documentation of test cases, test results, and creation of technical system documentation.',
+      'Collaboration with the technical team under agile methodologies.'
     ],
-    technologies: ['React', 'Node.js', 'AWS', 'PostgreSQL', 'Docker']
-  },
-  {
-    company: 'Digital Solutions Co.',
-    role: 'Full Stack Developer',
-    period: '2020 - 2022',
-    description: [
-      'Developed and maintained multiple client-facing web applications',
-      'Optimized database queries improving performance by 40%',
-      'Collaborated with designers to implement responsive UI/UX'
-    ],
-    technologies: ['Vue.js', 'Express', 'MongoDB', 'Redis']
-  },
-  {
-    company: 'StartUp Labs',
-    role: 'Frontend Developer',
-    period: '2018 - 2020',
-    description: [
-      'Built responsive web applications from design mockups',
-      'Implemented real-time features using WebSocket',
-      'Participated in agile development process'
-    ],
-    technologies: ['React', 'JavaScript', 'CSS3', 'Firebase']
+    technologies: ['Oracle SQL', 'Manual Testing','Internal Systems', 'IT Support', 'Agile Methodologies']
   }
+  
 ];
 
 export const certifications: Certification[] = [
   {
-    name: 'AWS Certified Solutions Architect',
-    issuer: 'Amazon Web Services',
-    date: '2023',
-    credentialId: 'AWS-CSA-2023'
+  name: 'Software Development Technologist',
+  issuer: 'UNINPAHU',
+  date: '2023 - 2025',
+  credentialId: '—',
+  url: ''
+},
+  {
+    name: 'Information Technology Specialist – Cybersecurity',
+    issuer: 'Certiport (Pearson VUE)',
+    date: 'November 2025',
+    credentialId: 'Certiport ',
+    url: 'src/Sources/IT-SPECIALIST-CYBERSECURITY.pdf',
   },
   {
-    name: 'Professional Scrum Master I',
-    issuer: 'Scrum.org',
-    date: '2022',
-    credentialId: 'PSM-I-2022'
+    name: 'Introduction to Front-End Development',
+    issuer: 'Meta (via Coursera)',
+    date: 'July 2025',
+    credentialId: 'META-Coursera',
+    url: 'https://coursera.org/verify/HHGUCCSUTVM9'
+  },
+   {
+    name: 'Programming Logic: Getting Started with JavaScript',
+    issuer: 'Alura LATAM (Oracle Next Education)',
+    date: 'August 2025',
+    credentialId: 'Oracle Next Education',
+    url: 'https://app.aluracursos.com/user/alejocasquete991/course/logica-programacion-sumergete-programacion-javascript/certificate'
   },
   {
-    name: 'MongoDB Certified Developer',
-    issuer: 'MongoDB University',
-    date: '2021',
-    credentialId: 'MDB-DEV-2021'
-  },
-  {
-    name: 'React Advanced Patterns',
-    issuer: 'Frontend Masters',
-    date: '2023'
-  }
+  name: 'Programming Logic: Exploring Functions and Lists',
+  issuer: 'Alura LATAM (Oracle Next Education)',
+  date: 'August 2025',
+  credentialId: 'Oracle Next Education',
+  url: 'https://app.aluracursos.com/user/alejocasquete991/course/logica-programacion-explorar-funciones-listas/certificate'
+},
+{
+  name: 'AI: Exploring the Potential of Generative Artificial Intelligence',
+  issuer: 'Alura LATAM (Oracle Next Education)',
+  date: 'August 2025',
+  credentialId: 'Oracle Next Education',
+  url: 'https://app.aluracursos.com/certificate/alejocasquete991/ia-explorando-potencial-inteligencia-artificial-generativa'
+},
+{
+  name: 'Técnico en Redes de Datos',
+  issuer: 'Fundación Carlos Slim - Capacítate para el Empleo',
+  date: 'May 2025',
+  credentialId: 'A2F23889-EE9B-42CC-9F58-8088730C0D4F',
+  url: 'src/Sources/Certificado-TecnicoRedes_De_Datos_DACO.pdf'
+}
+
+
 ];
 
 export const socialLinks: SocialLink[] = [

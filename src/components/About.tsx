@@ -65,12 +65,18 @@ const About = () => {
             </div>
 
             <div className="mt-8 flex flex-wrap gap-4">
-              <button className="px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-lg hover:shadow-lg hover:shadow-cyan-500/50 transition-all duration-300">
+              <a href="src/Sources/IT-SPECIALIST-CYBERSECURITY.pdf" 
+                target="_blank"
+                rel="noopener noreferrer"
+                className="px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-lg hover:shadow-lg hover:shadow-cyan-500/50 transition-all duration-300"
+              >
                 Download CV
-              </button>
-              <button className="px-6 py-3 bg-slate-800 border border-cyan-500/30 text-cyan-400 rounded-lg hover:bg-slate-700 transition-all duration-300">
+              </a>
+              <a href="Contact.tsx" 
+                className="px-6 py-3 bg-slate-800 border border-cyan-500/30 text-cyan-400 rounded-lg hover:bg-slate-700 transition-all duration-300"
+              >
                 Contact Me
-              </button>
+              </a>
             </div>
           </div>
 
@@ -78,7 +84,8 @@ const About = () => {
             className={`transform transition-all duration-1000 delay-300 ${
               isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-10'
             }`}
-          >
+            
+          > 
             <div className="grid grid-cols-2 gap-6">
               {stats.map((stat, index) => {
                 const Icon = stat.icon;
@@ -102,7 +109,7 @@ const About = () => {
                       </div>
                     </div>
                   </div>
-                );
+                ); 
               })}
             </div>
           </div>

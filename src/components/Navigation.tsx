@@ -56,11 +56,14 @@ const Navigation = () => {
                 {item.label}
               </button>
             ))}
-            <button className="px-6 py-2 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-lg hover:shadow-lg hover:shadow-cyan-500/50 transition-all duration-300">
-              Download CV
-            </button>
+            <a href="src/Sources/IT-SPECIALIST-CYBERSECURITY.pdf" 
+                target="_blank"
+                rel="noopener noreferrer"
+                className="px-6 py-2 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-lg hover:shadow-lg hover:shadow-cyan-500/50 transition-all duration-300"
+              >
+                Download CV
+              </a>
           </div>
-
           <button
             className="md:hidden text-white"
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
