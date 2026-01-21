@@ -1,9 +1,11 @@
 import { useEffect, useRef, useState } from 'react';
 import { skills } from '../data/portfolio';
+import { useTranslation } from 'react-i18next';
 
 const Skills = () => {
   const [isVisible, setIsVisible] = useState(false);
   const sectionRef = useRef<HTMLDivElement>(null);
+  const { t } = useTranslation();
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -38,10 +40,10 @@ const Skills = () => {
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
-            Skills <span className="bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">Library</span>
+            {t('skills.title')}
           </h2>
           <p className="text-gray-400 text-lg max-w-2xl mx-auto">
-            My technical expertise organized by category
+            {t('skills.subtitle')}
           </p>
         </div>
 

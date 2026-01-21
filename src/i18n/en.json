@@ -7,6 +7,139 @@
     "contact": "Contact",
     "downloadCv": "Download CV",
     "hireMe": "Hire Me"
+  },
+  "hero": {
+    "title": "Junior Developer | QA Tester",
+    "subtitle": "Developing reliable software through code and quality testing",
+    "programmingLanguages": "Programming Languages:",
+    "technologies": "Technologies:",
+    "editor": "editor.tsx",
+    "projects": "projects"
+  },
+  "projects": {
+    "title": "Featured Projects",
+    "subtitle": "A selection of projects showcasing my expertise in full-stack development",
+    "view": "View"
+  },
+  "skills": {
+    "title": "Skills Library",
+    "subtitle": "My technical expertise organized by category"
+  },
+  "experience": {
+    "title": "Experience & Technologies",
+    "subtitle": "My professional journey and the technologies I work with"
+  },
+  "contact": {
+    "title": "Get In Touch",
+    "subtitle": "Let's discuss your next project or idea!",
+    "email": "Email",
+    "phone": "Phone",
+    "location": "Location",
+    "followMe": "Follow Me",
+    "name": "Name",
+    "emailLabel": "Email",
+    "subject": "Subject",
+    "message": "Message",
+    "sendMessage": "Send Message",
+    "sending": "Sending...",
+    "messageSent": "Message sent successfully!",
+    "messageError": "Failed to send message. Please try again."
+  },
+  "footer": {
+    "by": "By Alejandro Casquete",
+    "copyright": "© 2026 All rights reserved",
+    "privacy": "Privacy",
+    "terms": "Terms"
+  },
+  "about": {
+    "title": "About Me",
+    "paragraph1": "I'm a Junior Software Developer and QA Tester passionate about building modern web applications and reliable digital solutions. I'm currently studying Software Engineering and gaining hands-on experience through real projects in web development, technical support, and software testing.",
+    "paragraph2": "I focus on writing clean, maintainable code while continuously improving my skills in technologies like JavaScript, React, Java, and Python. I enjoy learning new tools, solving problems, and understanding how systems work both from the development and quality assurance perspectives.",
+    "paragraph3": "When I'm not coding, you'll find me working on personal projects, exploring new technologies, improving my portfolio, or learning more about software architecture and best practices.",
+    "downloadCv": "Download CV",
+    "contactMe": "Contact Me",
+    "projectsCompleted": "Projects Completed",
+    "happyClients": "Happy Clients",
+    "yearsExperience": "Years Experience",
+    "certifications": "Certifications"
+  },
+  "certifications": {
+    "title": "Certifications & Achievements",
+    "subtitle": "Professional certifications that validate my expertise",
+    "professionalCertifications": "Professional Certifications",
+    "1": {
+      "name": "Software Development Technologist",
+      "issuer": "UNINPAHU"
+    },
+    "2": {
+      "name": "Information Technology Specialist – Cybersecurity",
+      "issuer": "Certiport (Pearson VUE)"
+    },
+    "3": {
+      "name": "Introduction to Front-End Development",
+      "issuer": "Meta (via Coursera)"
+    },
+    "4": {
+      "name": "Programming Logic: Getting Started with JavaScript",
+      "issuer": "Alura LATAM (Oracle Next Education)"
+    },
+    "5": {
+      "name": "Programming Logic: Exploring Functions and Lists",
+      "issuer": "Alura LATAM (Oracle Next Education)"
+    },
+    "6": {
+      "name": "AI: Exploring the Potential of Generative Artificial Intelligence",
+      "issuer": "Alura LATAM (Oracle Next Education)"
+    },
+    "7": {
+      "name": "Técnico en Redes de Datos",
+      "issuer": "Fundación Carlos Slim - Capacítate para el Empleo"
+    }
+  },
+  "projectModal": {
+    "techStack": "Tech Stack",
+    "viewLive": "View Live",
+    "viewCode": "View Code"
+  },
+  "languageSelector": {
+    "spanish": "Español",
+    "english": "English"
+  },
+  "projectsData": {
+    "1": {
+      "title": "RefriAlaska",
+      "description": "A modern web application built with Html, Css and JavaScript, featuring real-time data synchronization and responsive design.",
+      "category": "Corporate Website"
+    },
+    "2": {
+      "title": "BogoSpots",
+      "description": "A digital museum-type web platform where photographic spots of Bogotá D.C are discovered, documented and shared through user-generated content and curatorial validation.",
+      "category": "Full-stack web application - In progress"
+    },
+    "3": {
+      "title": "In development",
+      "description": "web project in progress",
+      "category": "SaaS/Driver"
+    },
+    "4": {
+      "title": "In development",
+      "description": "project in progress",
+      "category": "Web Project"
+    }
+  },
+  "experiences": {
+    "1": {
+      "role": "IT Apprentice / Technology",
+      "description": [
+        "Support in the operation and maintenance of internal systems and enterprise applications.",
+        "Execution of basic SQL queries in Oracle databases for data validation and information verification.",
+        "First-level technical support and resolution of software and system-related incidents.",
+        "Execution of basic functional manual testing on an internal company application.",
+        "Documentation of test cases, test results, and creation of technical system documentation.",
+        "Collaboration with the technical team under agile methodologies."
+      ],
+      "technologies": ["Oracle SQL", "Manual Testing", "Internal Systems", "IT Support", "Agile Methodologies"]
+    }
   }
 }
 

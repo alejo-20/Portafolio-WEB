@@ -1,6 +1,7 @@
 import { X } from 'lucide-react';
 import { Project } from '../types/portfolio';
 import { useEffect } from 'react';
+import { useTranslation } from 'react-i18next';
 
 interface ProjectModalProps {
   project: Project;
@@ -8,6 +9,7 @@ interface ProjectModalProps {
 }
 
 const ProjectModal = ({ project, onClose }: ProjectModalProps) => {
+  const { t } = useTranslation();
   useEffect(() => {
     document.body.style.overflow = 'hidden';
     return () => {
@@ -42,14 +44,14 @@ const ProjectModal = ({ project, onClose }: ProjectModalProps) => {
         <div className="p-8">
           <div className="mb-4">
             <span className="inline-block px-3 py-1 bg-cyan-500/10 border border-cyan-500/30 rounded-full text-cyan-400 text-sm mb-4">
-              {project.category}
+              {t(project.category)}
             </span>
-            <h2 className="text-3xl font-bold text-white mb-4">{project.title}</h2>
-            <p className="text-gray-300 leading-relaxed">{project.description}</p>
+            <h2 className="text-3xl font-bold text-white mb-4">{t(project.title)}</h2>
+            <p className="text-gray-300 leading-relaxed">{t(project.description)}</p>
           </div>
 
           <div className="mb-6">
-            <h3 className="text-sm font-semibold text-gray-400 mb-3">Tech Stack</h3>
+            <h3 className="text-sm font-semibold text-gray-400 mb-3">{t('projectModal.techStack')}</h3>
             <div className="flex flex-wrap gap-2">
               {project.techStack.map((tech) => (
                 <span
@@ -71,7 +73,7 @@ const ProjectModal = ({ project, onClose }: ProjectModalProps) => {
               onClick={(e) => e.stopPropagation()}
               className="flex-1 px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-lg hover:shadow-lg hover:shadow-cyan-500/50 transition-all duration-300 text-center flex items-center justify-center"
             >
-              View Live
+              {t('projectModal.viewLive')}
             </a>
           )}
 
@@ -83,7 +85,7 @@ const ProjectModal = ({ project, onClose }: ProjectModalProps) => {
               onClick={(e) => e.stopPropagation()}
               className="flex-1 px-6 py-3 bg-slate-800 border border-cyan-500/30 text-cyan-400 rounded-lg hover:bg-slate-700 transition-all duration-300 text-center flex items-center justify-center"
             >
-              View Code
+              {t('projectModal.viewCode')}
             </a>
           )}
         </div>

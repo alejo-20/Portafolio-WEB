@@ -2,10 +2,12 @@ import { useState, useEffect } from 'react';
 import { projects } from '../data/portfolio';
 import ProjectModal from './ProjectModal';
 import { Code2, Terminal, Cpu } from 'lucide-react';
+import { useTranslation } from 'react-i18next';
 
 const Hero = () => {
   const [selectedProject, setSelectedProject] = useState<string | null>(null);
   const [currentCodeLine, setCurrentCodeLine] = useState(0);
+  const { t } = useTranslation();
 
   //Portatil imagen
   const codeSnippets = [
@@ -41,7 +43,7 @@ const Hero = () => {
           </h1>
           <p className="text-xl sm:text-2xl md:text-3xl text-gray-300 mb-4">Junior Developer | QA Tester </p>
           <p className="text-base sm:text-lg text-gray-400 max-w-2xl mx-auto">
-            Developing reliable software through code and quality testing
+            {t('hero.subtitle')}
           </p>
         </div>
 
@@ -73,7 +75,7 @@ const Hero = () => {
                   </div>
                   <div className="flex items-center space-x-2 text-cyan-400">
                     <Code2 size={14} />
-                    <span className="text-xs font-mono">editor.tsx</span>
+                    <span className="text-xs font-mono">{t('hero.editor')}</span>
                   </div>
                 </div>
 
@@ -97,7 +99,7 @@ const Hero = () => {
                   <div className="mt-4 sm:mt-6 space-y-3 pt-4 border-t border-cyan-500/20">
                     <div className="flex items-center space-x-2 text-xs sm:text-sm">
                       <Terminal className="text-cyan-400 flex-shrink-0" size={16} />
-                      <span className="text-gray-400">Programming Languages:</span>
+                      <span className="text-gray-400">{t('hero.programmingLanguages')}</span>
                     </div>
                     <div className="text-cyan-400 font-mono text-xs sm:text-sm">
                       Python, JavaScript, Java
@@ -105,7 +107,7 @@ const Hero = () => {
 
                     <div className="flex items-center space-x-2 text-xs sm:text-sm mt-3">
                       <Cpu className="text-cyan-400 flex-shrink-0" size={16} />
-                      <span className="text-gray-400">Technologies:</span>
+                      <span className="text-gray-400">{t('hero.technologies')}</span>
                     </div>
                     <div className="text-cyan-400 font-mono text-xs sm:text-sm">
                       React, Node.js, SQL, AWS
@@ -133,7 +135,7 @@ const Hero = () => {
                     <div className="w-2.5 h-2.5 rounded-full bg-yellow-500"></div>
                     <div className="w-2.5 h-2.5 rounded-full bg-green-500"></div>
                   </div>
-                  <span className="text-xs font-mono text-cyan-400">projects</span>
+                  <span className="text-xs font-mono text-cyan-400">{t('hero.projects')}</span>
                 </div>
 
                 <div className="p-4 sm:p-6 min-h-80 sm:min-h-96">
@@ -165,9 +167,9 @@ const Hero = () => {
                         </div>
                         <div className="flex-1 flex flex-col justify-end">
                           <h3 className="text-xs sm:text-sm font-semibold text-gray-200 mb-1 truncate">
-                            {project.title}
+                            {t(project.title)}
                           </h3>
-                          <p className="text-xs text-cyan-400">{project.category}</p>
+                          <p className="text-xs text-cyan-400">{t(project.category)}</p>
                         </div>
                       </button>
                     ))}

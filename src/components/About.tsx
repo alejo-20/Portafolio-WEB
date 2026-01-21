@@ -1,9 +1,11 @@
 import { useEffect, useRef, useState } from 'react';
 import { Code2, Rocket, Users, Award } from 'lucide-react';
+import { useTranslation } from 'react-i18next';
 
 const About = () => {
   const [isVisible, setIsVisible] = useState(false);
   const sectionRef = useRef<HTMLDivElement>(null);
+  const { t } = useTranslation();
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -23,10 +25,10 @@ const About = () => {
   }, []);
 
   const stats = [
-    { icon: Code2, label: 'Projects Completed', value: '5+' },
-    { icon: Users, label: 'Happy Clients', value: '5+' },
-    { icon: Rocket, label: 'Years Experience', value: '1+' },
-    { icon: Award, label: 'Certifications', value: '10+' }
+    { icon: Code2, labelKey: 'about.projectsCompleted', value: '5+' },
+    { icon: Users, labelKey: 'about.happyClients', value: '5+' },
+    { icon: Rocket, labelKey: 'about.yearsExperience', value: '1+' },
+    { icon: Award, labelKey: 'about.certifications', value: '7+' }
   ];
 
   return (
@@ -44,22 +46,17 @@ const About = () => {
             }`}
           >
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-              About <span className="bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">Me</span>
+              {t('about.title')}
             </h2>
             <div className="space-y-4 text-gray-300 leading-relaxed">
               <p>
-                I'm a Junior Software Developer and QA Tester passionate about building modern web applications and
-                reliable digital solutions. I'm currently studying Software Engineering and gaining hands-on experience
-                through real projects in web development, technical support, and software testing.
-                </p>
-              <p>
-                I focus on writing clean, maintainable code while continuously improving my skills in technologies like
-                JavaScript, React, Java, and Python. I enjoy learning new tools, solving problems, and understanding how
-                systems work both from the development and quality assurance perspectives.
+                {t('about.paragraph1')}
               </p>
               <p>
-                When I'm not coding, you'll find me working on personal projects, exploring new technologies, improving
-                my portfolio, or learning more about software architecture and best practices.
+                {t('about.paragraph2')}
+              </p>
+              <p>
+                {t('about.paragraph3')}
               </p>
 
             </div>
@@ -70,12 +67,12 @@ const About = () => {
                 rel="noopener noreferrer"
                 className="px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-lg hover:shadow-lg hover:shadow-cyan-500/50 transition-all duration-300"
               >
-                Download CV
+                {t('about.downloadCv')}
               </a>
               <a href="#contact" 
                 className="px-6 py-3 bg-slate-800 border border-cyan-500/30 text-cyan-400 rounded-lg hover:bg-slate-700 transition-all duration-300"
               >
-                Contact Me
+                {t('about.contactMe')}
               </a>
             </div>
           </div>
@@ -91,7 +88,7 @@ const About = () => {
                 const Icon = stat.icon;
                 return (
                   <div
-                    key={stat.label}
+                    key={stat.labelKey}
                     className="relative group"
                     style={{ animationDelay: `${index * 100}ms` }}
                   >
@@ -105,7 +102,7 @@ const About = () => {
                         {stat.value}
                       </div>
                       <div className="text-sm text-gray-400">
-                        {stat.label}
+                        {t(stat.labelKey)}
                       </div>
                     </div>
                   </div>

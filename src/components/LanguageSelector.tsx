@@ -3,7 +3,7 @@ import { Globe } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 
 const LanguageSelector = () => {
-  const { i18n } = useTranslation();
+  const { i18n, t } = useTranslation();
   const [open, setOpen] = useState(false);
   const ref = useRef<HTMLDivElement | null>(null);
 
@@ -40,14 +40,14 @@ const LanguageSelector = () => {
             className="w-full text-left px-4 py-3 hover:bg-gray-50 dark:hover:bg-gray-700 flex items-center gap-3"
           >
             <span className="text-xl">🇪🇸</span>
-            <span>Español</span>
+            <span>{t('languageSelector.spanish')}</span>
           </button>
           <button
             onClick={() => change('en')}
             className="w-full text-left px-4 py-3 hover:bg-gray-50 dark:hover:bg-gray-700 flex items-center gap-3"
           >
             <span className="text-xl">🇺🇸</span>
-            <span>English</span>
+            <span>{t('languageSelector.english')}</span>
           </button>
         </div>
       )}

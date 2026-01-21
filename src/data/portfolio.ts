@@ -1,6 +1,6 @@
-import { SiTypescript, SiJavascript, SiPython, SiPostgresql, SiMongodb, SiTailwindcss, SiHtml5, SiCss3, SiPostman, SiMysql, SiOracle } from "react-icons/si";
+import { SiJavascript, SiPostgresql, SiTailwindcss, SiHtml5, SiCss3, SiPostman, SiMysql, SiOracle } from "react-icons/si";
 import { Project, Skill, Experience, Certification, SocialLink } from '../types/portfolio';
-import { FaReact, FaGit, FaDocker, FaAws, FaGithub } from "react-icons/fa";
+import { FaReact, FaGit, FaGithub } from "react-icons/fa";
 import { VscVscode } from "react-icons/vsc";
 import { GrGrow } from "react-icons/gr";
 import { MdAssignmentTurnedIn, MdChecklist, MdBugReport } from "react-icons/md";
@@ -10,41 +10,41 @@ import { MdAssignmentTurnedIn, MdChecklist, MdBugReport } from "react-icons/md";
 export const projects: Project[] = [
   {
     id: '1',
-    title: 'RefriAlaska',
-    description: 'A modern web application built with Html, Css and JavaScript, featuring real-time data synchronization and responsive design.',
+    title: 'projectsData.1.title',
+    description: 'projectsData.1.description',
     techStack: ['HTML', 'CSS', 'JavaScript'],
     image: 'src/Sources/RefriAlaska Projecto.png',
-    category: 'Website Corporativo',
+    category: 'projectsData.1.category',
     liveUrl: 'https://refrialaskavillavo.com',
     githubUrl: 'https://github.com/alejo-20/refri-alaska'
   },
   {
     id: '2',
-    title: 'BogoSpots ',
-    description: 'A digital museum-type web platform where photographic spots of Bogotá D.C are discovered, documented and shared through user-generated content and curatorial validation.',
+    title: 'projectsData.2.title',
+    description: 'projectsData.2.description',
     techStack: ['React', 'PostgreSQL', 'Tailwind','Vue.JS'],
     image: 'src/Sources/Landing BogoSpots.png',
-    category: 'Full-stack web application - In progress',
+    category: 'projectsData.2.category',
     liveUrl: '',
     githubUrl:''
   },
   {
     id: '3',
-    title: 'In development',
-    description: 'web project in progress',
+    title: 'projectsData.3.title',
+    description: 'projectsData.3.description',
     techStack: ['...', '...', '...'],
     image: 'src/Sources/AppenProgreso.avif',
-    category: 'SaaS/Driver',
+    category: 'projectsData.3.category',
     liveUrl: '',
     githubUrl:''
   },
   {
     id: '4',
-    title: 'In development',
-    description: 'project in progress',
+    title: 'projectsData.4.title',
+    description: 'projectsData.4.description',
     techStack: ['...', '...', '...'],
     image: 'src/Sources/AppEnProceso2.avif',
-    category: 'Web Project',
+    category: 'projectsData.4.category',
     liveUrl: '',
     githubUrl:''
   },
@@ -88,67 +88,67 @@ export const skills: Skill[] = [
 export const experiences: Experience[] = [
  {
     company: 'TeChrea',
-    role: 'Aprendiz IT / Tecnología',
+    role: 'experiences.1.role',
     period: 'April - October 2025',
     description: [
-      'Support in the operation and maintenance of internal systems and enterprise applications.',
-      'Execution of basic SQL queries in Oracle databases for data validation and information verification.',
-      'First-level technical support and resolution of software and system-related incidents.',
-      'Execution of basic functional manual testing on an internal company application.',
-      'Documentation of test cases, test results, and creation of technical system documentation.',
-      'Collaboration with the technical team under agile methodologies.'
+      'experiences.1.description.0',
+      'experiences.1.description.1',
+      'experiences.1.description.2',
+      'experiences.1.description.3',
+      'experiences.1.description.4',
+      'experiences.1.description.5'
     ],
-    technologies: ['Oracle SQL', 'Manual Testing','Internal Systems', 'IT Support', 'Agile Methodologies']
+    technologies: ['experiences.1.technologies.0', 'experiences.1.technologies.1','experiences.1.technologies.2', 'experiences.1.technologies.3', 'experiences.1.technologies.4']
   },
  
 ];
 
 export const certifications: Certification[] = [
   {
-  name: 'Software Development Technologist',
-  issuer: 'UNINPAHU',
+  name: 'certifications.1.name',
+  issuer: 'certifications.1.issuer',
   date: '2023 - 2025',
   credentialId: '—',
   url: ''
 },
   {
-    name: 'Information Technology Specialist – Cybersecurity',
-    issuer: 'Certiport (Pearson VUE)',
+    name: 'certifications.2.name',
+    issuer: 'certifications.2.issuer',
     date: 'November 2025',
     credentialId: 'Certiport ',
     url: 'src/Sources/IT-SPECIALIST-CYBERSECURITY.pdf',
   },
   {
-    name: 'Introduction to Front-End Development',
-    issuer: 'Meta (via Coursera)',
+    name: 'certifications.3.name',
+    issuer: 'certifications.3.issuer',
     date: 'July 2025',
     credentialId: 'META-Coursera',
     url: 'https://coursera.org/verify/HHGUCCSUTVM9'
   },
    {
-    name: 'Programming Logic: Getting Started with JavaScript',
-    issuer: 'Alura LATAM (Oracle Next Education)',
+    name: 'certifications.4.name',
+    issuer: 'certifications.4.issuer',
     date: 'August 2025',
     credentialId: 'Oracle Next Education',
     url: 'https://app.aluracursos.com/user/alejocasquete991/course/logica-programacion-sumergete-programacion-javascript/certificate'
   },
   {
-  name: 'Programming Logic: Exploring Functions and Lists',
-  issuer: 'Alura LATAM (Oracle Next Education)',
+  name: 'certifications.5.name',
+  issuer: 'certifications.5.issuer',
   date: 'August 2025',
   credentialId: 'Oracle Next Education',
   url: 'https://app.aluracursos.com/user/alejocasquete991/course/logica-programacion-explorar-funciones-listas/certificate'
 },
 {
-  name: 'AI: Exploring the Potential of Generative Artificial Intelligence',
-  issuer: 'Alura LATAM (Oracle Next Education)',
+  name: 'certifications.6.name',
+  issuer: 'certifications.6.issuer',
   date: 'August 2025',
   credentialId: 'Oracle Next Education',
   url: 'https://app.aluracursos.com/certificate/alejocasquete991/ia-explorando-potencial-inteligencia-artificial-generativa'
 },
 {
-  name: 'Técnico en Redes de Datos',
-  issuer: 'Fundación Carlos Slim - Capacítate para el Empleo',
+  name: 'certifications.7.name',
+  issuer: 'certifications.7.issuer',
   date: 'May 2025',
   credentialId: 'A2F23889-EE9B-42CC-9F58-8088730C0D4F',
   url: 'src/Sources/Certificado-TecnicoRedes_De_Datos_DACO.pdf'
