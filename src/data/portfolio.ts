@@ -1,6 +1,10 @@
-import { SiTypescript, SiJavascript, SiPython, SiPostgresql, SiMongodb, SiTailwindcss, SiVuedotjs, SiNextdotjs, SiExpress, SiHtml5, SiCss3 } from "react-icons/si";
+import { SiTypescript, SiJavascript, SiPython, SiPostgresql, SiMongodb, SiTailwindcss, SiHtml5, SiCss3, SiPostman, SiMysql, SiOracle } from "react-icons/si";
 import { Project, Skill, Experience, Certification, SocialLink } from '../types/portfolio';
-import { FaReact, FaNodeJs, FaGit, FaDocker, FaAws, FaGithub } from "react-icons/fa";
+import { FaReact, FaGit, FaDocker, FaAws, FaGithub } from "react-icons/fa";
+import { VscVscode } from "react-icons/vsc";
+import { GrGrow } from "react-icons/gr";
+import { MdAssignmentTurnedIn, MdChecklist, MdBugReport } from "react-icons/md";
+
 
 
 export const projects: Project[] = [
@@ -10,8 +14,9 @@ export const projects: Project[] = [
     description: 'A modern web application built with Html, Css and JavaScript, featuring real-time data synchronization and responsive design.',
     techStack: ['HTML', 'CSS', 'JavaScript'],
     image: 'src/Sources/RefriAlaska Projecto.png',
-    category: 'Website Corporativo'
-     
+    category: 'Website Corporativo',
+    liveUrl: 'https://refrialaskavillavo.com',
+    githubUrl: 'https://github.com/alejo-20/refri-alaska'
   },
   {
     id: '2',
@@ -19,7 +24,9 @@ export const projects: Project[] = [
     description: 'A digital museum-type web platform where photographic spots of Bogotá D.C are discovered, documented and shared through user-generated content and curatorial validation.',
     techStack: ['React', 'PostgreSQL', 'Tailwind','Vue.JS'],
     image: 'src/Sources/Landing BogoSpots.png',
-    category: 'Full-stack web application - In progress'
+    category: 'Full-stack web application - In progress',
+    liveUrl: '',
+    githubUrl:''
   },
   {
     id: '3',
@@ -27,35 +34,54 @@ export const projects: Project[] = [
     description: 'web project in progress',
     techStack: ['...', '...', '...'],
     image: 'src/Sources/AppenProgreso.avif',
-    category: 'SaaS/Driver'
+    category: 'SaaS/Driver',
+    liveUrl: '',
+    githubUrl:''
   },
   {
     id: '4',
     title: 'In development',
-    description: 'web project in progress',
-    techStack: ['React', 'D3.js', 'AWS'],
+    description: 'project in progress',
+    techStack: ['...', '...', '...'],
     image: 'src/Sources/AppEnProceso2.avif',
-    category: 'Web Project'
+    category: 'Web Project',
+    liveUrl: '',
+    githubUrl:''
   },
   
 ];
 
 export const skills: Skill[] = [
-  { name: 'HTML5', category: 'Frontend', level: 95, icon: SiHtml5, color: '#f76e1e' },
-  { name: 'CSS3', category: 'Frontend', level: 95, icon: SiCss3, color: '#2648df' },
-  { name: 'JavaScript', category: 'Frontend', level: 95, icon: SiJavascript, color: '#F7DF1E' },
-  { name: 'React', category: 'Frontend', level: 95, icon: FaReact, color: '#61DAFB' },
-  { name: 'Tailwind CSS', category: 'Frontend', level: 92, icon: SiTailwindcss, color: '#38BDF8' },
-  { name: 'PostgreSQL', category: 'Database', level: 85, icon: SiPostgresql, color: '#336791' },
-  { name: 'MySQL', category: 'Database', level: 85, icon: SiPostgresql, color: '#336791' },
-  { name: 'ORACLE SQL', category: 'Database', level: 85, icon: SiPostgresql, color: '#336791' },
-  { name: 'Rest APIs', category: 'Backend', level: 82, icon: SiMongodb, color: '#47A248' },
-  { name: 'Git', category: 'Tools', level: 93, icon: FaGit, color: '#f17725' },
-  { name: 'GitHub', category: 'Tools', level: 93, icon: FaGithub, color: '#000000' },
-  { name: 'VS CODE', category: 'Tools', level: 93, icon: FaGithub, color: '#00ff4c' },
-  { name: 'POSTMAN', category: 'Tools', level: 93, icon: FaGithub, color: '#00ff62' },
-  { name: 'Agile / Scrum', category: 'Methodologies', level: 93, icon: FaGithub, color: '#00ff0d' },
+  // Frontend
+  { name: 'HTML5', category: 'Frontend', level: 92, icon: SiHtml5, color: '#E34F26' },
+  { name: 'CSS3', category: 'Frontend', level: 92, icon: SiCss3, color: '#1572B6' },
+  { name: 'JavaScript (ES6+)', category: 'Frontend', level: 90, icon: SiJavascript, color: '#F7DF1E' },
+  { name: 'React', category: 'Frontend', level: 88, icon: FaReact, color: '#61DAFB' },
+  { name: 'Tailwind CSS', category: 'Frontend', level: 85, icon: SiTailwindcss, color: '#38BDF8' },
+
+  // Backend & APIs
+  { name: 'REST APIs', category: 'Backend', level: 80, icon: SiPostman, color: '#FF6C37' },
+
+  // Databases
+  { name: 'PostgreSQL', category: 'Databases', level: 82, icon: SiPostgresql, color: '#336791' },
+  { name: 'MySQL', category: 'Databases', level: 80, icon: SiMysql, color: '#4479A1' },
+  { name: 'Oracle SQL', category: 'Databases', level: 78, icon: SiOracle, color: '#F80000' },
+
+  // QA & Testing
+  { name: 'Manual Testing', category: 'QA & Testing', level: 85, icon: MdBugReport, color: '#E11D48' },
+  { name: 'Test Case Design', category: 'QA & Testing', level: 82, icon: MdChecklist, color: '#8B5CF6' },
+  { name: 'Bug Reporting', category: 'QA & Testing', level: 82, icon: MdAssignmentTurnedIn, color: '#10B981' },
+
+  // Tools
+  { name: 'Git', category: 'Tools', level: 90, icon: FaGit, color: '#F05032' },
+  { name: 'GitHub', category: 'Tools', level: 90, icon: FaGithub, color: '#181717' },
+  { name: 'VS Code', category: 'Tools', level: 88, icon: VscVscode, color: '#007ACC' },
+  { name: 'Postman', category: 'Tools', level: 85, icon: SiPostman, color: '#FF6C37' },
+
+  // Methodologies
+  { name: 'Agile / Scrum', category: 'Methodologies', level: 85, icon: GrGrow, color: '#22C55E' },
 ];
+
 
 
 //Experiencia laboral
@@ -73,8 +99,8 @@ export const experiences: Experience[] = [
       'Collaboration with the technical team under agile methodologies.'
     ],
     technologies: ['Oracle SQL', 'Manual Testing','Internal Systems', 'IT Support', 'Agile Methodologies']
-  }
-  
+  },
+ 
 ];
 
 export const certifications: Certification[] = [

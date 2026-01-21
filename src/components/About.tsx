@@ -72,7 +72,7 @@ const About = () => {
               >
                 Download CV
               </a>
-              <a href="Contact.tsx" 
+              <a href="#contact" 
                 className="px-6 py-3 bg-slate-800 border border-cyan-500/30 text-cyan-400 rounded-lg hover:bg-slate-700 transition-all duration-300"
               >
                 Contact Me

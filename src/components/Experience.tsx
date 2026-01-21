@@ -42,7 +42,7 @@ const Experience = () => {
             <div
               key={index}
               className={`relative group transform transition-all duration-700 ${
-                isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
+                experiences.length === 1 ? 'lg:col-start-2' : ''
               }`}
               style={{ transitionDelay: `${index * 200}ms` }}
             >
