@@ -14,7 +14,7 @@ const Hero = () => {
     "const developer = {",
     "  name: 'Doncan Alejandro Casquete ',",
     "  role: 'Junior Developer | QA Tester',",
-    "  skills: ['React', 'Node.js', 'AWS'],",
+    "  skills: ['HTML', 'CSS', 'Manual Testing'],",
     "  passion: 'Driven by continuous growth and learning',",
     "  availability: 'Open to opportunities'",
     "};",
@@ -41,7 +41,7 @@ const Hero = () => {
               Alejandro Casquete 
             </span>
           </h1>
-          <p className="text-xl sm:text-2xl md:text-3xl text-gray-300 mb-4">Junior Developer | QA Tester </p>
+          <p className="text-xl sm:text-2xl md:text-3xl text-gray-300 mb-4">Junior Developer | Junior QA</p>
           <p className="text-base sm:text-lg text-gray-400 max-w-2xl mx-auto">
             {t('hero.subtitle')}
           </p>
@@ -102,7 +102,7 @@ const Hero = () => {
                       <span className="text-gray-400">{t('hero.programmingLanguages')}</span>
                     </div>
                     <div className="text-cyan-400 font-mono text-xs sm:text-sm">
-                      Python, JavaScript, Java
+                      HTML, CSS, SQL, JavaScript(Basic), Java (Basic), Python(Basic) 
                     </div>
 
                     <div className="flex items-center space-x-2 text-xs sm:text-sm mt-3">
@@ -110,7 +110,7 @@ const Hero = () => {
                       <span className="text-gray-400">{t('hero.technologies')}</span>
                     </div>
                     <div className="text-cyan-400 font-mono text-xs sm:text-sm">
-                      React, Node.js, SQL, AWS
+                      React (Basic), Tailwind CSS, Git, Netlify, SQL, Soporte IT
                     </div>
                   </div>
                 </div>
