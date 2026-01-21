@@ -1,10 +1,12 @@
 import { useEffect, useRef, useState } from 'react';
 import { experiences } from '../data/portfolio';
 import { Briefcase, Calendar } from 'lucide-react';
+import { useTranslation } from 'react-i18next';
 
 const Experience = () => {
   const [isVisible, setIsVisible] = useState(false);
   const sectionRef = useRef<HTMLDivElement>(null);
+  const { t } = useTranslation();
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -30,10 +32,10 @@ const Experience = () => {
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
-            Experience & <span className="bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">Technologies</span>
+            {t('experience.title')}
           </h2>
           <p className="text-gray-400 text-lg max-w-2xl mx-auto">
-            My professional journey and the technologies I work with
+            {t('experience.subtitle')}
           </p>
         </div>
 
@@ -43,6 +45,7 @@ const Experience = () => {
               key={index}
               className={`relative group transform transition-all duration-700 ${
                 experiences.length === 1 ? 'lg:col-start-2' : ''
+               /* varias experiencias: isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10' */
               }`}
               style={{ transitionDelay: `${index * 200}ms` }}
             >
@@ -59,14 +62,14 @@ const Experience = () => {
                   </div>
                 </div>
 
-                <h3 className="text-xl font-bold text-white mb-2">{exp.role}</h3>
+                <h3 className="text-xl font-bold text-white mb-2">{t(exp.role)}</h3>
                 <p className="text-cyan-400 mb-4">{exp.company}</p>
 
                 <ul className="space-y-2 mb-6">
                   {exp.description.map((item, i) => (
                     <li key={i} className="text-sm text-gray-400 flex items-start gap-2">
                       <span className="text-cyan-400 mt-1">•</span>
-                      <span>{item}</span>
+                      <span>{t(item)}</span>
                     </li>
                   ))}
                 </ul>
@@ -77,7 +80,7 @@ const Experience = () => {
                       key={tech}
                       className="px-2 py-1 bg-slate-800/80 border border-cyan-500/20 rounded text-cyan-400 text-xs"
                     >
-                      {tech}
+                      {t(tech)}
                     </span>
                   ))}
                 </div>

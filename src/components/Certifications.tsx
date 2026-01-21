@@ -1,10 +1,12 @@
 import { useEffect, useRef, useState } from 'react';
 import { certifications } from '../data/portfolio';
 import { Award, Calendar, FileCheck } from 'lucide-react';
+import { useTranslation } from 'react-i18next';
 
 const Certifications = () => {
   const [isVisible, setIsVisible] = useState(false);
   const sectionRef = useRef<HTMLDivElement>(null);
+  const { t } = useTranslation();
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -30,10 +32,10 @@ const Certifications = () => {
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
-            <span className="bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">Certifications</span> & Achievements
+            {t('certifications.title')}
           </h2>
           <p className="text-gray-400 text-lg max-w-2xl mx-auto">
-            Professional certifications that validate my expertise
+            {t('certifications.subtitle')}
           </p>
         </div>
 
@@ -60,9 +62,9 @@ const Certifications = () => {
                 </div>
 
                 <h3 className="text-xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors">
-                  {cert.name}
+                  {t(cert.name)}
                 </h3>
-                <p className="text-cyan-400 mb-4">{cert.issuer}</p>
+                <p className="text-cyan-400 mb-4">{t(cert.issuer)}</p>
 
                 {cert.credentialId && cert.url && (
                 <a
@@ -91,7 +93,7 @@ const Certifications = () => {
             <Award className="text-cyan-400" size={32} />
             <div className="text-left">
               <div className="text-2xl font-bold text-white">{certifications.length}+</div>
-              <div className="text-sm text-gray-400">Professional Certifications</div>
+              <div className="text-sm text-gray-400">{t('certifications.professionalCertifications')}</div>
             </div>
           </div>
         </div>

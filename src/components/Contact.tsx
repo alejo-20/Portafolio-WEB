@@ -1,10 +1,15 @@
 import { useEffect, useRef, useState } from 'react';
 import { socialLinks } from '../data/portfolio';
 import { Github, Linkedin, Twitter, Mail, Send, MapPin, Phone } from 'lucide-react';
+import { useTranslation } from 'react-i18next';
 
 const Contact = () => {
   const [isVisible, setIsVisible] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
   const sectionRef = useRef<HTMLDivElement>(null);
+  const formRef = useRef<HTMLFormElement>(null);
+  const { t } = useTranslation();
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -33,6 +38,37 @@ const Contact = () => {
     return icons[iconName] || Mail;
   };
 
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+    setSubmitStatus('idle');
+
+    try {
+      const formData = new FormData(formRef.current!);
+      
+      const response = await fetch('/', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body: new URLSearchParams({
+          'form-name': 'contact',
+          ...Object.fromEntries(formData)
+        }).toString()
+      });
+
+      if (response.ok) {
+        setSubmitStatus('success');
+        formRef.current?.reset();
+      } else {
+        throw new Error('Form submission failed');
+      }
+    } catch (error) {
+      console.error('Error submitting form:', error);
+      setSubmitStatus('error');
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
+
   return (
     <section ref={sectionRef} id="contact" className="relative py-20 bg-gradient-to-b from-black via-slate-900 to-black overflow-hidden">
       <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxnIGZpbGw9IiMwZmZmZmYiIGZpbGwtb3BhY2l0eT0iMC4wMiI+PHBhdGggZD0iTTM2IDM0djItaDJ2LTJoLTJ6bTAtNHYyaDJ2LTJoLTJ6Ii8+PC9nPjwvZz48L3N2Zz4=')] opacity-30"></div>
@@ -43,10 +79,10 @@ const Contact = () => {
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
-            Get In <span className="bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">Touch</span>
+            {t('contact.title')}
           </h2>
           <p className="text-gray-400 text-lg max-w-2xl mx-auto">
-            Let's discuss your next project or opportunity
+            {t('contact.subtitle')}
           </p>
         </div>
 
@@ -62,8 +98,8 @@ const Contact = () => {
                   <Mail className="text-cyan-400" size={24} />
                 </div>
                 <div>
-                  <h3 className="text-white font-semibold mb-1">Email</h3>
-                  <p className="text-gray-400 text-sm">alejocasquete991@gmail.com</p>
+                  <h3 className="text-white font-semibold mb-1">{t('contact.email')}</h3>
+                  <p className="text-gray-400 text-sm">alejocasquete619@gmail.com</p>
                 </div>
               </div>
 
@@ -72,7 +108,7 @@ const Contact = () => {
                   <Phone className="text-cyan-400" size={24} />
                 </div>
                 <div>
-                  <h3 className="text-white font-semibold mb-1">Phone</h3>
+                  <h3 className="text-white font-semibold mb-1">{t('contact.phone')}</h3>
                   <p className="text-gray-400 text-sm">+57 314 4384762</p>
                 </div>
               </div>
@@ -82,13 +118,13 @@ const Contact = () => {
                   <MapPin className="text-cyan-400" size={24} />
                 </div>
                 <div>
-                  <h3 className="text-white font-semibold mb-1">Location</h3>
+                  <h3 className="text-white font-semibold mb-1">{t('contact.location')}</h3>
                   <p className="text-gray-400 text-sm">Bogotá, CO</p>
                 </div>
               </div>
 
               <div className="mt-8">
-                <h3 className="text-white font-semibold mb-4">Follow Me</h3>
+                <h3 className="text-white font-semibold mb-4">{t('contact.followMe')}</h3>
                 <div className="flex flex-wrap gap-4">
                   {socialLinks.map((link) => {
                     const Icon = getIcon(link.icon);
@@ -116,63 +152,101 @@ const Contact = () => {
             className={`transform transition-all duration-1000 ${
               isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-10'
             }`}
+            //Formulario de Contacto
           >
             <div className="relative group">
               <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/20 to-blue-600/20 rounded-2xl blur-xl opacity-50"></div>
 
               <div className="relative bg-gradient-to-br from-slate-900/90 to-slate-800/90 backdrop-blur-sm rounded-2xl border border-cyan-500/20 p-8">
-                <form className="space-y-6">
+                <form 
+                  ref={formRef} 
+                  onSubmit={handleSubmit} 
+                  name="contact" 
+                  method="POST" 
+                  data-netlify="true" 
+                  data-netlify-honeypot="bot-field"
+                  className="space-y-6"
+                >
+                  <input type="hidden" name="form-name" value="contact" />
+                  <div style={{ display: 'none' }}>
+                    <label>Don't fill this out if you're human: <input name="bot-field" /></label>
+                  </div>
                   <div>
                     <label className="block text-sm font-medium text-gray-300 mb-2">
-                      Name
+                      {t('contact.name')}
                     </label>
                     <input
                       type="text"
+                      name="user_name"
                       className="w-full px-4 py-3 bg-slate-800/50 border border-cyan-500/20 rounded-lg text-white placeholder-gray-500 focus:outline-none focus:border-cyan-400/50 focus:ring-1 focus:ring-cyan-400/50 transition-all duration-300"
                       placeholder="Your name"
+                      required
                     />
                   </div>
 
                   <div>
                     <label className="block text-sm font-medium text-gray-300 mb-2">
-                      Email
+                      {t('contact.emailLabel')}
                     </label>
                     <input
                       type="email"
+                      name="user_email"
                       className="w-full px-4 py-3 bg-slate-800/50 border border-cyan-500/20 rounded-lg text-white placeholder-gray-500 focus:outline-none focus:border-cyan-400/50 focus:ring-1 focus:ring-cyan-400/50 transition-all duration-300"
                       placeholder="your.email@example.com"
+                      required
                     />
                   </div>
 
                   <div>
                     <label className="block text-sm font-medium text-gray-300 mb-2">
-                      Subject
+                      {t('contact.subject')}
                     </label>
                     <input
                       type="text"
+                      name="subject"
                       className="w-full px-4 py-3 bg-slate-800/50 border border-cyan-500/20 rounded-lg text-white placeholder-gray-500 focus:outline-none focus:border-cyan-400/50 focus:ring-1 focus:ring-cyan-400/50 transition-all duration-300"
                       placeholder="Project inquiry"
+                      required
                     />
                   </div>
 
                   <div>
                     <label className="block text-sm font-medium text-gray-300 mb-2">
-                      Message
+                      {t('contact.message')}
                     </label>
                     <textarea
                       rows={5}
+                      name="message"
                       className="w-full px-4 py-3 bg-slate-800/50 border border-cyan-500/20 rounded-lg text-white placeholder-gray-500 focus:outline-none focus:border-cyan-400/50 focus:ring-1 focus:ring-cyan-400/50 transition-all duration-300 resize-none"
                       placeholder="Tell me about your project..."
+                      required
                     ></textarea>
                   </div>
 
                   <button
                     type="submit"
-                    className="w-full px-6 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-lg hover:shadow-lg hover:shadow-cyan-500/50 transition-all duration-300 flex items-center justify-center gap-2 font-semibold"
+                    disabled={isSubmitting}
+                    className="w-full px-6 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-lg hover:shadow-lg hover:shadow-cyan-500/50 transition-all duration-300 flex items-center justify-center gap-2 font-semibold disabled:opacity-50 disabled:cursor-not-allowed"
                   >
-                    <Send size={20} />
-                    Send Message
+                    {isSubmitting ? (
+                      <>
+                        <div className="animate-spin rounded-full h-4 w-4 border-b-2 border-white"></div>
+                        {t('contact.sending')}
+                      </>
+                    ) : (
+                      <>
+                        <Send size={20} />
+                        {t('contact.sendMessage')}
+                      </>
+                    )}
                   </button>
+
+                  {submitStatus === 'success' && (
+                    <p className="text-green-400 text-center mt-4">{t('contact.messageSent')}</p>
+                  )}
+                  {submitStatus === 'error' && (
+                    <p className="text-red-400 text-center mt-4">{t('contact.messageError')}</p>
+                  )}
                 </form>
               </div>
             </div>

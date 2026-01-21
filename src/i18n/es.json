@@ -7,6 +7,139 @@
     "contact": "Contacto",
     "downloadCv": "Descargar CV",
     "hireMe": "Contrátame"
+  },
+  "hero": {
+    "title": "Desarrollador Junior | Tester QA",
+    "subtitle": "Desarrollando software confiable a través del código y las pruebas de calidad",
+    "programmingLanguages": "Lenguajes de Programación:",
+    "technologies": "Tecnologías:",
+    "editor": "editor.tsx",
+    "projects": "proyectos"
+  },
+  "projects": {
+    "title": "Proyectos Destacados",
+    "subtitle": "Una selección de proyectos que muestran mi experiencia en desarrollo full-stack",
+    "view": "Ver"
+  },
+  "skills": {
+    "title": "Biblioteca de Habilidades",
+    "subtitle": "Mi experiencia técnica organizada por categoría"
+  },
+  "experience": {
+    "title": "Experiencia y Tecnologías",
+    "subtitle": "Mi trayectoria profesional y las tecnologías con las que trabajo"
+  },
+  "contact": {
+    "title": "Ponte en Contacto",
+    "subtitle": "¡Hablemos de tu próximo proyecto o idea!",
+    "email": "Correo",
+    "phone": "Teléfono",
+    "location": "Ubicación",
+    "followMe": "Sígueme",
+    "name": "Nombre",
+    "emailLabel": "Correo",
+    "subject": "Asunto",
+    "message": "Mensaje",
+    "sendMessage": "Enviar Mensaje",
+    "sending": "Enviando...",
+    "messageSent": "¡Mensaje enviado exitosamente!",
+    "messageError": "Error al enviar el mensaje. Por favor, inténtalo de nuevo."
+  },
+  "footer": {
+    "by": "Por Alejandro Casquete",
+    "copyright": "© 2026 Todos los derechos reservados",
+    "privacy": "Privacidad",
+    "terms": "Términos"
+  },
+  "about": {
+    "title": "Sobre Mí",
+    "paragraph1": "Soy un Desarrollador de Software Junior y Tester QA apasionado por construir aplicaciones web modernas y soluciones digitales confiables. Actualmente estoy estudiando Ingeniería de Software y ganando experiencia práctica a través de proyectos reales en desarrollo web, soporte técnico y pruebas de software.",
+    "paragraph2": "Me enfoco en escribir código limpio y mantenible mientras mejoro continuamente mis habilidades en tecnologías como JavaScript, React, Java y Python. Disfruto aprendiendo nuevas herramientas, resolviendo problemas y entendiendo cómo funcionan los sistemas tanto desde la perspectiva de desarrollo como de aseguramiento de calidad.",
+    "paragraph3": "Cuando no estoy programando, me encontrarás trabajando en proyectos personales, explorando nuevas tecnologías, mejorando mi portafolio o aprendiendo más sobre arquitectura de software y mejores prácticas.",
+    "downloadCv": "Descargar CV",
+    "contactMe": "Contáctame",
+    "projectsCompleted": "Proyectos Completados",
+    "happyClients": "Clientes Satisfechos",
+    "yearsExperience": "Años de Experiencia",
+    "certifications": "Certificaciones"
+  },
+  "certifications": {
+    "title": "Certificaciones y Logros",
+    "subtitle": "Certificaciones profesionales que validan mi experiencia",
+    "professionalCertifications": "Certificaciones Profesionales",
+    "1": {
+      "name": "Tecnólogo en Desarrollo de Software",
+      "issuer": "UNINPAHU"
+    },
+    "2": {
+      "name": "Especialista en Tecnología de la Información – Ciberseguridad",
+      "issuer": "Certiport (Pearson VUE)"
+    },
+    "3": {
+      "name": "Introducción al Desarrollo Front-End",
+      "issuer": "Meta (via Coursera)"
+    },
+    "4": {
+      "name": "Lógica de Programación: Sumérgete en la Programación con JavaScript",
+      "issuer": "Alura LATAM (Oracle Next Education)"
+    },
+    "5": {
+      "name": "Lógica de Programación: Explorar Funciones y Listas",
+      "issuer": "Alura LATAM (Oracle Next Education)"
+    },
+    "6": {
+      "name": "IA: Explorando el Potencial de la Inteligencia Artificial Generativa",
+      "issuer": "Alura LATAM (Oracle Next Education)"
+    },
+    "7": {
+      "name": "Técnico en Redes de Datos",
+      "issuer": "Fundación Carlos Slim - Capacítate para el Empleo"
+    }
+  },
+  "projectModal": {
+    "techStack": "Tecnologías",
+    "viewLive": "Ver en Vivo",
+    "viewCode": "Ver Código"
+  },
+  "languageSelector": {
+    "spanish": "Español",
+    "english": "Inglés"
+  },
+  "projectsData": {
+    "1": {
+      "title": "RefriAlaska",
+      "description": "Una aplicación web moderna construida con Html, Css y JavaScript, con sincronización de datos en tiempo real y diseño responsivo.",
+      "category": "Sitio Web Corporativo"
+    },
+    "2": {
+      "title": "BogoSpots",
+      "description": "Una plataforma web tipo museo digital donde se descubren, documentan y comparten puntos fotográficos de Bogotá D.C. a través de contenido generado por usuarios y validación curatorial.",
+      "category": "Aplicación web full-stack - En progreso"
+    },
+    "3": {
+      "title": "En desarrollo",
+      "description": "proyecto web en progreso",
+      "category": "SaaS/Driver"
+    },
+    "4": {
+      "title": "En desarrollo",
+      "description": "proyecto en progreso",
+      "category": "Proyecto Web"
+    }
+  },
+  "experiences": {
+    "1": {
+      "role": "Aprendiz IT / Tecnología",
+      "description": [
+        "Apoyo en la operación y mantenimiento de sistemas internos y aplicaciones empresariales.",
+        "Ejecución de consultas SQL básicas en bases de datos Oracle para validación de datos y verificación de información.",
+        "Soporte técnico de primer nivel y resolución de incidentes relacionados con software y sistemas.",
+        "Ejecución de pruebas manuales funcionales básicas en una aplicación interna de la empresa.",
+        "Documentación de casos de prueba, resultados de pruebas y creación de documentación técnica de sistemas.",
+        "Colaboración con el equipo técnico bajo metodologías ágiles."
+      ],
+      "technologies": ["Oracle SQL", "Pruebas Manuales", "Sistemas Internos", "Soporte IT", "Metodologías Ágiles"]
+    }
   }
 }
 

@@ -2,11 +2,14 @@ import { useState, useEffect, useRef } from 'react';
 import { projects } from '../data/portfolio';
 import ProjectModal from './ProjectModal';
 import { ExternalLink, Github } from 'lucide-react';
+import { useTranslation } from 'react-i18next';
+
 
 const Projects = () => {
   const [selectedProject, setSelectedProject] = useState<string | null>(null);
   const [visibleProjects, setVisibleProjects] = useState<string[]>([]);
   const projectRefs = useRef<(HTMLDivElement | null)[]>([]);
+  const { t } = useTranslation();
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -37,10 +40,10 @@ const Projects = () => {
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
-            Featured <span className="bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">Projects</span>
+            {t('projects.title')}
           </h2>
           <p className="text-gray-400 text-lg max-w-2xl mx-auto">
-            A selection of projects showcasing my expertise in full-stack development
+            {t('projects.subtitle')}
           </p>
         </div>
 
@@ -72,13 +75,13 @@ const Projects = () => {
                 <div className="p-6 flex-1 flex flex-col">
                   <div className="mb-3">
                     <span className="inline-block px-3 py-1 bg-cyan-500/10 border border-cyan-500/30 rounded-full text-cyan-400 text-xs mb-3">
-                      {project.category}
+                      {t(project.category)}
                     </span>
                     <h3 className="text-xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors">
-                      {project.title}
+                      {t(project.title)}
                     </h3>
                     <p className="text-gray-400 text-sm line-clamp-2">
-                      {project.description}
+                      {t(project.description)}
                     </p>
                   </div>
 
@@ -105,7 +108,7 @@ const Projects = () => {
                         className="flex-1 px-4 py-2 bg-gradient-to-r from-cyan-500 to-blue-600 text-white text-sm rounded-lg hover:shadow-lg hover:shadow-cyan-500/50 transition-all duration-300 flex items-center justify-center gap-2"
                       >
                         <ExternalLink size={16} />
-                        View
+                        {t('projects.view')}
                       </button>
                       <button
                         onClick={(e) => {
