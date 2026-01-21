@@ -64,12 +64,18 @@ const Certifications = () => {
                 </h3>
                 <p className="text-cyan-400 mb-4">{cert.issuer}</p>
 
-                {cert.credentialId && (
-                  <div className="flex items-center gap-2 text-sm text-gray-400 bg-slate-800/50 rounded-lg px-3 py-2 border border-cyan-500/10">
-                    <FileCheck size={16} className="text-cyan-400" />
-                    <span className="font-mono">{cert.credentialId}</span>
-                  </div>
-                )}
+                {cert.credentialId && cert.url && (
+                <a
+                  href={cert.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-2 text-sm text-gray-400 bg-slate-800/50 rounded-lg px-3 py-2 border border-cyan-500/10 hover:border-cyan-400/40 hover:text-cyan-300 transition-all cursor-pointer"
+                >
+                  <FileCheck size={16} className="text-cyan-400" />
+                  <span className="font-mono">{cert.credentialId}</span>
+                </a>
+              )}
+
               </div>
             </div>
           ))}

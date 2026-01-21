@@ -1,134 +1,160 @@
+import { SiTypescript, SiJavascript, SiPython, SiPostgresql, SiMongodb, SiTailwindcss, SiHtml5, SiCss3, SiPostman, SiMysql, SiOracle } from "react-icons/si";
 import { Project, Skill, Experience, Certification, SocialLink } from '../types/portfolio';
+import { FaReact, FaGit, FaDocker, FaAws, FaGithub } from "react-icons/fa";
+import { VscVscode } from "react-icons/vsc";
+import { GrGrow } from "react-icons/gr";
+import { MdAssignmentTurnedIn, MdChecklist, MdBugReport } from "react-icons/md";
+
+
 
 export const projects: Project[] = [
   {
     id: '1',
-    title: 'Porpeto Web',
-    description: 'A modern web application built with React and Node.js, featuring real-time data synchronization and responsive design.',
-    techStack: ['React', 'Node.js', 'MongoDB'],
-    image: 'https://images.pexels.com/photos/1779487/pexels-photo-1779487.jpeg?auto=compress&cs=tinysrgb&w=800',
-    category: 'SaaS/Driver'
+    title: 'RefriAlaska',
+    description: 'A modern web application built with Html, Css and JavaScript, featuring real-time data synchronization and responsive design.',
+    techStack: ['HTML', 'CSS', 'JavaScript'],
+    image: 'src/Sources/RefriAlaska Projecto.png',
+    category: 'Website Corporativo',
+    liveUrl: 'https://refrialaskavillavo.com',
+    githubUrl: 'https://github.com/alejo-20/refri-alaska'
   },
   {
     id: '2',
-    title: 'App Maul',
-    description: 'E-commerce mobile application with advanced search capabilities and seamless checkout experience.',
-    techStack: ['React Native', 'Firebase', 'Stripe'],
-    image: 'https://images.pexels.com/photos/1092644/pexels-photo-1092644.jpeg?auto=compress&cs=tinysrgb&w=800',
-    category: 'SaaS/Driver'
+    title: 'BogoSpots ',
+    description: 'A digital museum-type web platform where photographic spots of Bogotá D.C are discovered, documented and shared through user-generated content and curatorial validation.',
+    techStack: ['React', 'PostgreSQL', 'Tailwind','Vue.JS'],
+    image: 'src/Sources/Landing BogoSpots.png',
+    category: 'Full-stack web application - In progress',
+    liveUrl: '',
+    githubUrl:''
   },
   {
     id: '3',
-    title: 'Tienda E-commerce',
-    description: 'Full-stack e-commerce platform with inventory management, payment processing, and admin dashboard.',
-    techStack: ['Next.js', 'PostgreSQL', 'Tailwind'],
-    image: 'https://images.pexels.com/photos/230544/pexels-photo-230544.jpeg?auto=compress&cs=tinysrgb&w=800',
-    category: 'SaaS/Driver'
+    title: 'In development',
+    description: 'web project in progress',
+    techStack: ['...', '...', '...'],
+    image: 'src/Sources/AppenProgreso.avif',
+    category: 'SaaS/Driver',
+    liveUrl: '',
+    githubUrl:''
   },
   {
     id: '4',
-    title: 'Dashboard',
-    description: 'Analytics dashboard with real-time data visualization, custom charts, and export functionality.',
-    techStack: ['React', 'D3.js', 'AWS'],
-    image: 'https://images.pexels.com/photos/265087/pexels-photo-265087.jpeg?auto=compress&cs=tinysrgb&w=800',
-    category: 'SaaS/Driver'
+    title: 'In development',
+    description: 'project in progress',
+    techStack: ['...', '...', '...'],
+    image: 'src/Sources/AppEnProceso2.avif',
+    category: 'Web Project',
+    liveUrl: '',
+    githubUrl:''
   },
-  {
-    id: '5',
-    title: 'Tyul Pases',
-    description: 'Travel booking platform with integrated payment system and booking management.',
-    techStack: ['Vue.js', 'Express', 'MySQL'],
-    image: 'https://images.pexels.com/photos/1008155/pexels-photo-1008155.jpeg?auto=compress&cs=tinysrgb&w=800',
-    category: 'SaaS/Driver'
-  },
-  {
-    id: '6',
-    title: 'Bogo Packagi',
-    description: 'Package tracking and logistics management system with real-time updates.',
-    techStack: ['Angular', 'Spring Boot', 'Docker'],
-    image: 'https://images.pexels.com/photos/4246120/pexels-photo-4246120.jpeg?auto=compress&cs=tinysrgb&w=800',
-    category: 'SaaS/Driver'
-  }
+  
 ];
 
 export const skills: Skill[] = [
-  { name: 'JavaScript', category: 'Languages', level: 95 },
-  { name: 'TypeScript', category: 'Languages', level: 90 },
-  { name: 'Python', category: 'Languages', level: 85 },
-  { name: 'C++', category: 'Languages', level: 75 },
-  { name: 'React', category: 'Frontend', level: 95 },
-  { name: 'Next.js', category: 'Frontend', level: 88 },
-  { name: 'Vue.js', category: 'Frontend', level: 80 },
-  { name: 'Tailwind CSS', category: 'Frontend', level: 92 },
-  { name: 'Node.js', category: 'Backend', level: 90 },
-  { name: 'Express', category: 'Backend', level: 88 },
-  { name: 'PostgreSQL', category: 'Database', level: 85 },
-  { name: 'MongoDB', category: 'Database', level: 82 },
-  { name: 'AWS', category: 'DevOps', level: 78 },
-  { name: 'Docker', category: 'DevOps', level: 80 },
-  { name: 'Git', category: 'Tools', level: 93 }
+  // Frontend
+  { name: 'HTML5', category: 'Frontend', level: 92, icon: SiHtml5, color: '#E34F26' },
+  { name: 'CSS3', category: 'Frontend', level: 92, icon: SiCss3, color: '#1572B6' },
+  { name: 'JavaScript (ES6+)', category: 'Frontend', level: 90, icon: SiJavascript, color: '#F7DF1E' },
+  { name: 'React', category: 'Frontend', level: 88, icon: FaReact, color: '#61DAFB' },
+  { name: 'Tailwind CSS', category: 'Frontend', level: 85, icon: SiTailwindcss, color: '#38BDF8' },
+
+  // Backend & APIs
+  { name: 'REST APIs', category: 'Backend', level: 80, icon: SiPostman, color: '#FF6C37' },
+
+  // Databases
+  { name: 'PostgreSQL', category: 'Databases', level: 82, icon: SiPostgresql, color: '#336791' },
+  { name: 'MySQL', category: 'Databases', level: 80, icon: SiMysql, color: '#4479A1' },
+  { name: 'Oracle SQL', category: 'Databases', level: 78, icon: SiOracle, color: '#F80000' },
+
+  // QA & Testing
+  { name: 'Manual Testing', category: 'QA & Testing', level: 85, icon: MdBugReport, color: '#E11D48' },
+  { name: 'Test Case Design', category: 'QA & Testing', level: 82, icon: MdChecklist, color: '#8B5CF6' },
+  { name: 'Bug Reporting', category: 'QA & Testing', level: 82, icon: MdAssignmentTurnedIn, color: '#10B981' },
+
+  // Tools
+  { name: 'Git', category: 'Tools', level: 90, icon: FaGit, color: '#F05032' },
+  { name: 'GitHub', category: 'Tools', level: 90, icon: FaGithub, color: '#181717' },
+  { name: 'VS Code', category: 'Tools', level: 88, icon: VscVscode, color: '#007ACC' },
+  { name: 'Postman', category: 'Tools', level: 85, icon: SiPostman, color: '#FF6C37' },
+
+  // Methodologies
+  { name: 'Agile / Scrum', category: 'Methodologies', level: 85, icon: GrGrow, color: '#22C55E' },
 ];
 
+
+
+//Experiencia laboral
 export const experiences: Experience[] = [
-  {
-    company: 'Tech Innovations Inc.',
-    role: 'Senior Full Stack Developer',
-    period: '2022 - Present',
+ {
+    company: 'TeChrea',
+    role: 'Aprendiz IT / Tecnología',
+    period: 'April - October 2025',
     description: [
-      'Led development of microservices architecture serving 1M+ users',
-      'Implemented CI/CD pipelines reducing deployment time by 60%',
-      'Mentored junior developers and conducted code reviews'
+      'Support in the operation and maintenance of internal systems and enterprise applications.',
+      'Execution of basic SQL queries in Oracle databases for data validation and information verification.',
+      'First-level technical support and resolution of software and system-related incidents.',
+      'Execution of basic functional manual testing on an internal company application.',
+      'Documentation of test cases, test results, and creation of technical system documentation.',
+      'Collaboration with the technical team under agile methodologies.'
     ],
-    technologies: ['React', 'Node.js', 'AWS', 'PostgreSQL', 'Docker']
+    technologies: ['Oracle SQL', 'Manual Testing','Internal Systems', 'IT Support', 'Agile Methodologies']
   },
-  {
-    company: 'Digital Solutions Co.',
-    role: 'Full Stack Developer',
-    period: '2020 - 2022',
-    description: [
-      'Developed and maintained multiple client-facing web applications',
-      'Optimized database queries improving performance by 40%',
-      'Collaborated with designers to implement responsive UI/UX'
-    ],
-    technologies: ['Vue.js', 'Express', 'MongoDB', 'Redis']
-  },
-  {
-    company: 'StartUp Labs',
-    role: 'Frontend Developer',
-    period: '2018 - 2020',
-    description: [
-      'Built responsive web applications from design mockups',
-      'Implemented real-time features using WebSocket',
-      'Participated in agile development process'
-    ],
-    technologies: ['React', 'JavaScript', 'CSS3', 'Firebase']
-  }
+ 
 ];
 
 export const certifications: Certification[] = [
   {
-    name: 'AWS Certified Solutions Architect',
-    issuer: 'Amazon Web Services',
-    date: '2023',
-    credentialId: 'AWS-CSA-2023'
+  name: 'Software Development Technologist',
+  issuer: 'UNINPAHU',
+  date: '2023 - 2025',
+  credentialId: '—',
+  url: ''
+},
+  {
+    name: 'Information Technology Specialist – Cybersecurity',
+    issuer: 'Certiport (Pearson VUE)',
+    date: 'November 2025',
+    credentialId: 'Certiport ',
+    url: 'src/Sources/IT-SPECIALIST-CYBERSECURITY.pdf',
   },
   {
-    name: 'Professional Scrum Master I',
-    issuer: 'Scrum.org',
-    date: '2022',
-    credentialId: 'PSM-I-2022'
+    name: 'Introduction to Front-End Development',
+    issuer: 'Meta (via Coursera)',
+    date: 'July 2025',
+    credentialId: 'META-Coursera',
+    url: 'https://coursera.org/verify/HHGUCCSUTVM9'
+  },
+   {
+    name: 'Programming Logic: Getting Started with JavaScript',
+    issuer: 'Alura LATAM (Oracle Next Education)',
+    date: 'August 2025',
+    credentialId: 'Oracle Next Education',
+    url: 'https://app.aluracursos.com/user/alejocasquete991/course/logica-programacion-sumergete-programacion-javascript/certificate'
   },
   {
-    name: 'MongoDB Certified Developer',
-    issuer: 'MongoDB University',
-    date: '2021',
-    credentialId: 'MDB-DEV-2021'
-  },
-  {
-    name: 'React Advanced Patterns',
-    issuer: 'Frontend Masters',
-    date: '2023'
-  }
+  name: 'Programming Logic: Exploring Functions and Lists',
+  issuer: 'Alura LATAM (Oracle Next Education)',
+  date: 'August 2025',
+  credentialId: 'Oracle Next Education',
+  url: 'https://app.aluracursos.com/user/alejocasquete991/course/logica-programacion-explorar-funciones-listas/certificate'
+},
+{
+  name: 'AI: Exploring the Potential of Generative Artificial Intelligence',
+  issuer: 'Alura LATAM (Oracle Next Education)',
+  date: 'August 2025',
+  credentialId: 'Oracle Next Education',
+  url: 'https://app.aluracursos.com/certificate/alejocasquete991/ia-explorando-potencial-inteligencia-artificial-generativa'
+},
+{
+  name: 'Técnico en Redes de Datos',
+  issuer: 'Fundación Carlos Slim - Capacítate para el Empleo',
+  date: 'May 2025',
+  credentialId: 'A2F23889-EE9B-42CC-9F58-8088730C0D4F',
+  url: 'src/Sources/Certificado-TecnicoRedes_De_Datos_DACO.pdf'
+}
+
+
 ];
 
 export const socialLinks: SocialLink[] = [

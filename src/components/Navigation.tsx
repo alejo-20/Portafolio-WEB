@@ -1,9 +1,13 @@
 import { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
+import { useTranslation } from 'react-i18next';
+import LanguageSelector from './LanguageSelector';
+
 
 const Navigation = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const { t } = useTranslation();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -22,12 +26,13 @@ const Navigation = () => {
   };
 
   const navItems = [
-    { label: 'Overview', id: 'hero' },
-    { label: 'Projects', id: 'projects' },
-    { label: 'Skills', id: 'skills' },
-    { label: 'Experience', id: 'experience' },
-    { label: 'Contact', id: 'contact' }
+    { label: 'nav.overview', id: 'hero' },
+    { label: 'nav.projects', id: 'projects' },
+    { label: 'nav.skills', id: 'skills' },
+    { label: 'nav.experience', id: 'experience' },
+    { label: 'nav.contact', id: 'contact' }
   ];
+  
 
   return (
     <nav
@@ -48,25 +53,31 @@ const Navigation = () => {
 
           <div className="hidden md:flex items-center space-x-8">
             {navItems.map((item) => (
+              
               <button
                 key={item.id}
                 onClick={() => scrollToSection(item.id)}
                 className="text-gray-300 hover:text-cyan-400 transition-colors duration-200 font-medium"
               >
-                {item.label}
+                {t(item.label)}
               </button>
             ))}
-            <button className="px-6 py-2 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-lg hover:shadow-lg hover:shadow-cyan-500/50 transition-all duration-300">
-              Hire Me
-            </button>
+            <a href="src/Sources/IT-SPECIALIST-CYBERSECURITY.pdf" 
+                target="_blank"
+                rel="noopener noreferrer"
+                className="px-6 py-2 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-lg hover:shadow-lg hover:shadow-cyan-500/50 transition-all duration-300"
+              >
+                {t('nav.downloadCv')}
+              </a>
+              <LanguageSelector />
           </div>
-
           <button
             className="md:hidden text-white"
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
           >
             {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
           </button>
+          
         </div>
       </div>
 
@@ -79,11 +90,11 @@ const Navigation = () => {
                 onClick={() => scrollToSection(item.id)}
                 className="block w-full text-left text-gray-300 hover:text-cyan-400 transition-colors duration-200 py-2"
               >
-                {item.label}
+                {t(item.label)}
               </button>
             ))}
             <button className="w-full px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-lg">
-              Hire Me
+              {t('nav.hireMe')}
             </button>
           </div>
         </div>

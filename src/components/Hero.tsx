@@ -7,12 +7,13 @@ const Hero = () => {
   const [selectedProject, setSelectedProject] = useState<string | null>(null);
   const [currentCodeLine, setCurrentCodeLine] = useState(0);
 
+  //Portatil imagen
   const codeSnippets = [
     "const developer = {",
-    "  name: 'Your Name',",
-    "  role: 'Full Stack Developer',",
+    "  name: 'Doncan Alejandro Casquete ',",
+    "  role: 'Junior Developer | QA Tester',",
     "  skills: ['React', 'Node.js', 'AWS'],",
-    "  passion: 'Building great products',",
+    "  passion: 'Driven by continuous growth and learning',",
     "  availability: 'Open to opportunities'",
     "};",
   ];
@@ -35,12 +36,12 @@ const Hero = () => {
         <div className="text-center mb-20 animate-fade-in">
           <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold mb-6">
             <span className="bg-gradient-to-r from-cyan-400 via-blue-500 to-cyan-400 bg-clip-text text-transparent animate-gradient">
-              Your Name
+              Alejandro Casquete 
             </span>
           </h1>
-          <p className="text-xl sm:text-2xl md:text-3xl text-gray-300 mb-4">Full Stack Developer</p>
+          <p className="text-xl sm:text-2xl md:text-3xl text-gray-300 mb-4">Junior Developer | QA Tester </p>
           <p className="text-base sm:text-lg text-gray-400 max-w-2xl mx-auto">
-            Crafting elegant solutions to complex problems
+            Developing reliable software through code and quality testing
           </p>
         </div>
 
@@ -99,7 +100,7 @@ const Hero = () => {
                       <span className="text-gray-400">Programming Languages:</span>
                     </div>
                     <div className="text-cyan-400 font-mono text-xs sm:text-sm">
-                      Python, JavaScript, C++
+                      Python, JavaScript, Java
                     </div>
 
                     <div className="flex items-center space-x-2 text-xs sm:text-sm mt-3">

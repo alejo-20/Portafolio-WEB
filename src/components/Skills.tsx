@@ -1,10 +1,8 @@
 import { useEffect, useRef, useState } from 'react';
 import { skills } from '../data/portfolio';
-import { BookOpen } from 'lucide-react';
 
 const Skills = () => {
   const [isVisible, setIsVisible] = useState(false);
-  const [selectedCategory, setSelectedCategory] = useState<string>('All');
   const sectionRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -24,21 +22,11 @@ const Skills = () => {
     return () => observer.disconnect();
   }, []);
 
-  const categories = ['All', ...Array.from(new Set(skills.map(s => s.category)))];
-  const filteredSkills = selectedCategory === 'All'
-    ? skills
-    : skills.filter(s => s.category === selectedCategory);
-
-  const getBookColor = (index: number) => {
-    const colors = [
-      'from-cyan-600 to-cyan-700',
-      'from-blue-600 to-blue-700',
-      'from-slate-600 to-slate-700',
-      'from-cyan-700 to-blue-800',
-      'from-blue-500 to-cyan-600'
-    ];
-    return colors[index % colors.length];
-  };
+  const categories = Array.from(new Set(skills.map(s => s.category))).sort();
+  const skillsByCategory = categories.map(cat => ({
+    name: cat,
+    skills: skills.filter(s => s.category === cat)
+  }));
 
   return (
     <section ref={sectionRef} id="skills" className="relative py-20 bg-gradient-to-b from-black via-slate-900 to-black overflow-hidden">
@@ -52,83 +40,92 @@ const Skills = () => {
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
             Skills <span className="bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">Library</span>
           </h2>
-          <p className="text-gray-400 text-lg max-w-2xl mx-auto mb-8">
-            My technical expertise organized like books in a digital library
+          <p className="text-gray-400 text-lg max-w-2xl mx-auto">
+            My technical expertise organized by category
           </p>
-
-          <div className="flex flex-wrap justify-center gap-3">
-            {categories.map((category) => (
-              <button
-                key={category}
-                onClick={() => setSelectedCategory(category)}
-                className={`px-4 py-2 rounded-lg font-medium transition-all duration-300 ${
-                  selectedCategory === category
-                    ? 'bg-gradient-to-r from-cyan-500 to-blue-600 text-white shadow-lg shadow-cyan-500/50'
-                    : 'bg-slate-800 border border-cyan-500/30 text-gray-400 hover:text-cyan-400 hover:border-cyan-400/50'
-                }`}
-              >
-                {category}
-              </button>
-            ))}
-          </div>
         </div>
 
-        <div className="relative">
-          <div className="absolute bottom-0 left-0 right-0 h-8 bg-gradient-to-t from-slate-800/80 to-transparent rounded-b-2xl"></div>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {skillsByCategory.map((category, catIndex) => (
+            <div
+              key={category.name}
+              className={`group relative transform transition-all duration-700 ${
+                isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
+              }`}
+              style={{ transitionDelay: `${catIndex * 100}ms` }}
+            >
+              <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/20 to-blue-600/20 rounded-2xl blur-xl group-hover:blur-2xl transition-all duration-300"></div>
 
-          <div className="bg-gradient-to-br from-slate-900/50 to-slate-800/50 backdrop-blur-sm rounded-2xl border border-cyan-500/20 p-8 md:p-12">
-            <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-6 gap-3 md:gap-4">
-              {filteredSkills.map((skill, index) => (
-                <div
-                  key={skill.name}
-                  className={`group relative transform transition-all duration-700 ${
-                    isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
-                  }`}
-                  style={{ transitionDelay: `${index * 50}ms` }}
-                >
-                  <div
-                    className={`relative bg-gradient-to-b ${getBookColor(index)} rounded-t rounded-b-sm shadow-lg hover:shadow-xl transition-all duration-300 cursor-pointer group-hover:-translate-y-2 h-32 md:h-40 flex flex-col justify-between p-3 md:p-4 border-l-2 border-r-2 border-white/10`}
-                  >
-                    <div className="flex justify-center mb-2">
-                      <BookOpen className="text-white/80" size={20} />
-                    </div>
+              <div className="relative bg-gradient-to-br from-slate-900/95 to-slate-800/95 backdrop-blur-xl rounded-2xl border border-cyan-500/30 overflow-hidden p-6 h-full"
+                style={{
+                  boxShadow: '0 40px 80px rgba(0, 0, 0, 0.55), inset 0 0 0 1px rgba(255,255,255,0.04)'
+                }}
+              >
+                <h3 className="text-xl font-bold text-white mb-6 pb-4 border-b border-cyan-500/20">
+                  {category.name}
+                </h3>
 
-                    <div className="flex-1 flex items-center justify-center">
-                      <div className="text-white font-bold text-xs md:text-sm text-center leading-tight [writing-mode:vertical-rl] rotate-180">
-                        {skill.name}
+                <div className="space-y-3">
+                  {category.skills.map((skill, skillIndex) => {
+                    const IconComponent = skill.icon;
+                    return (
+                      <div
+                        key={skill.name}
+                        className={`flex items-center gap-3 p-3 rounded-lg bg-slate-800/40 hover:bg-slate-700/60 border border-cyan-500/20 hover:border-cyan-400/50 transition-all duration-300 transform transition-all ${
+                          isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-4'
+                        }`}
+                        style={{ transitionDelay: `${catIndex * 100 + skillIndex * 50}ms` }}
+                      >
+                        {IconComponent && (
+                          <div className="flex-shrink-0">
+                            <IconComponent
+                              size={24}
+                              style={{ color: skill.color || '#06B6D4' }}
+                            />
+                          </div>
+                        )}
+                        <div className="flex-1 min-w-0">
+                          <div className="text-sm font-medium text-white truncate">
+                            {skill.name}
+                          </div>
+                          <div className="mt-1 flex gap-1 items-center">
+                            {[...Array(5)].map((_, i) => (
+                              <div
+                                key={i}
+                                className={`h-1.5 rounded-full transition-all duration-300 ${
+                                  i < Math.round(skill.level / 20)
+                                    ? 'bg-gradient-to-r from-cyan-400 to-blue-500 w-3'
+                                    : 'bg-gray-700 w-2'
+                                }`}
+                              ></div>
+                            ))}
+                          </div>
+                        </div>
+                        <div className="text-xs text-cyan-400 font-medium flex-shrink-0">
+                          {skill.level}%
+                        </div>
                       </div>
-                    </div>
-
-                    <div className="absolute -bottom-1 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-white/20 to-transparent"></div>
-                  </div>
-
-                  <div className="absolute -top-8 left-1/2 -translate-x-1/2 bg-slate-900 border border-cyan-500/30 rounded-lg px-3 py-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none whitespace-nowrap z-10">
-                    <div className="text-white text-xs font-semibold mb-1">{skill.name}</div>
-                    <div className="text-cyan-400 text-xs">{skill.category}</div>
-                    <div className="flex gap-1 mt-1">
-                      {[...Array(5)].map((_, i) => (
-                        <div
-                          key={i}
-                          className={`w-2 h-1 rounded ${
-                            i < skill.level / 20 ? 'bg-cyan-400' : 'bg-gray-600'
-                          }`}
-                        ></div>
-                      ))}
-                    </div>
-                  </div>
+                    );
+                  })}
                 </div>
-              ))}
+              </div>
             </div>
-          </div>
-
-          <div className="mt-4 text-center">
-            <div className="inline-flex items-center gap-2 px-4 py-2 bg-slate-900/80 border border-cyan-500/20 rounded-lg text-gray-400 text-sm">
-              <BookOpen size={16} className="text-cyan-400" />
-              <span>Hover over a book to see details</span>
-            </div>
-          </div>
+          ))}
         </div>
       </div>
+
+      <style>{`
+        @keyframes fadeInUp {
+          from {
+            opacity: 0;
+            transform: translateY(20px);
+          }
+          to {
+            opacity: 1;
+            transform: translateY(0);
+          }
+        }
+      `}</style>
     </section>
   );
 };

@@ -107,9 +107,16 @@ const Projects = () => {
                         <ExternalLink size={16} />
                         View
                       </button>
-                      <button className="px-4 py-2 bg-slate-800 border border-cyan-500/30 text-cyan-400 text-sm rounded-lg hover:bg-slate-700 transition-all duration-300">
+                      <button
+                        onClick={(e) => {
+                          e.stopPropagation();
+                          window.open(project.githubUrl, '_blank');
+                        }}
+                        className="px-4 py-2 bg-slate-800 border border-cyan-500/30 text-cyan-400 text-sm rounded-lg hover:bg-slate-700 transition-all duration-300"
+                      >
                         <Github size={16} />
                       </button>
+
                     </div>
                   </div>
                 </div>
