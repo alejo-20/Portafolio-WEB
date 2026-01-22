@@ -63,7 +63,7 @@ const Navigation = () => {
                 {t(item.label)}
               </button>
             ))}
-            <a href="public/images/CV-Doncan_Alejandro_Casquete.pdf" 
+            <a href="/pdfs/CV-Alejandro_Casquete2026.pdf" 
                 target="_blank"
                 rel="noopener noreferrer"
                 className="px-6 py-2 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-lg hover:shadow-lg hover:shadow-cyan-500/50 transition-all duration-300"
@@ -96,7 +96,7 @@ const Navigation = () => {
             ))}
             <button
               onClick={() =>
-                window.open('public/images/CV-Doncan_Alejandro_Casquete.pdf',
+                window.open('/pdfs/CV-Alejandro_Casquete2026.pdf',
                 '_blank',
                 'noopener,noreferrer')}
               className="w-full px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-lg"

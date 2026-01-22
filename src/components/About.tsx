@@ -25,8 +25,8 @@ const About = () => {
   }, []);
 
   const stats = [
-    { icon: Code2, labelKey: 'about.projectsCompleted', value: '5+' },
-    { icon: Users, labelKey: 'about.happyClients', value: '5+' },
+    { icon: Code2, labelKey: 'about.projectsCompleted', value: '4+' },
+    { icon: Users, labelKey: 'about.happyClients', value: '2+' },
     { icon: Rocket, labelKey: 'about.yearsExperience', value: '1+' },
     { icon: Award, labelKey: 'about.certifications', value: '7+' }
   ];
@@ -62,7 +62,7 @@ const About = () => {
             </div>
 
             <div className="mt-8 flex flex-wrap gap-4">
-              <a href="src/Sources/IT-SPECIALIST-CYBERSECURITY.pdf" 
+              <a href="/pdfs/CV-Alejandro_Casquete2026.pdf" 
                 target="_blank"
                 rel="noopener noreferrer"
                 className="px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-lg hover:shadow-lg hover:shadow-cyan-500/50 transition-all duration-300"
