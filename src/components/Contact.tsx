@@ -32,7 +32,6 @@ const Contact = () => {
     const icons: { [key: string]: any } = {
       Github,
       Linkedin,
-      Twitter,
       Mail
     };
     return icons[iconName] || Mail;
