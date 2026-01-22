@@ -13,7 +13,7 @@ export const projects: Project[] = [
     title: 'projectsData.1.title',
     description: 'projectsData.1.description',
     techStack: ['HTML', 'CSS', 'JavaScript'],
-    image: 'src/Sources/RefriAlaska Projecto.png',
+    image: 'public/images/RefriAlaska Projecto.png',
     category: 'projectsData.1.category',
     liveUrl: 'https://refrialaskavillavo.com',
     githubUrl: 'https://github.com/alejo-20/refri-alaska'
@@ -23,7 +23,7 @@ export const projects: Project[] = [
     title: 'projectsData.2.title',
     description: 'projectsData.2.description',
     techStack: ['React', 'PostgreSQL', 'Tailwind','Vue.JS'],
-    image: 'src/Sources/Landing BogoSpots.png',
+    image: 'public/images/Landing BogoSpots.png',
     category: 'projectsData.2.category',
     liveUrl: '',
     githubUrl:''
@@ -33,7 +33,7 @@ export const projects: Project[] = [
     title: 'projectsData.3.title',
     description: 'projectsData.3.description',
     techStack: ['...', '...', '...'],
-    image: 'src/Sources/AppenProgreso.avif',
+    image: 'public/images/AppenProgreso.avif',
     category: 'projectsData.3.category',
     liveUrl: '',
     githubUrl:''
@@ -43,7 +43,7 @@ export const projects: Project[] = [
     title: 'projectsData.4.title',
     description: 'projectsData.4.description',
     techStack: ['...', '...', '...'],
-    image: 'src/Sources/AppEnProceso2.avif',
+    image: 'public/images/AppEnProceso2.avif',
     category: 'projectsData.4.category',
     liveUrl: '',
     githubUrl:''
@@ -117,7 +117,7 @@ export const certifications: Certification[] = [
     issuer: 'certifications.2.issuer',
     date: 'November 2025',
     credentialId: 'Certiport ',
-    url: 'src/Sources/IT-SPECIALIST-CYBERSECURITY.pdf',
+    url: 'public/pdfs/IT-SPECIALIST-CYBERSECURITY.pdf',
   },
   {
     name: 'certifications.3.name',
@@ -152,7 +152,7 @@ export const certifications: Certification[] = [
   issuer: 'certifications.7.issuer',
   date: 'May 2025',
   credentialId: 'A2F23889-EE9B-42CC-9F58-8088730C0D4F',
-  url: 'src/Sources/Certificado-TecnicoRedes_De_Datos_DACO.pdf'
+  url: 'public/pdfs/Certificado-TecnicoRedes_De_Datos_DACO.pdf'
 }
 
 

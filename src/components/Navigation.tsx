@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 import LanguageSelector from './LanguageSelector';
+import { FaLaptopCode } from "react-icons/fa";
 
 
 const Navigation = () => {
@@ -46,7 +47,7 @@ const Navigation = () => {
         <div className="flex justify-between items-center h-16 md:h-20">
           <div className="flex items-center space-x-2">
             <div className="w-8 h-8 bg-gradient-to-br from-cyan-400 to-blue-600 rounded-lg flex items-center justify-center">
-              <span className="text-white font-bold text-lg">P</span>
+              <FaLaptopCode className="text-white w-5 h-5" />
             </div>
             <span className="text-white font-semibold text-xl hidden sm:block">Portfolio</span>
           </div>
@@ -62,7 +63,7 @@ const Navigation = () => {
                 {t(item.label)}
               </button>
             ))}
-            <a href="src/Sources/IT-SPECIALIST-CYBERSECURITY.pdf" 
+            <a href="public/images/CV-Doncan_Alejandro_Casquete.pdf" 
                 target="_blank"
                 rel="noopener noreferrer"
                 className="px-6 py-2 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-lg hover:shadow-lg hover:shadow-cyan-500/50 transition-all duration-300"
@@ -93,9 +94,18 @@ const Navigation = () => {
                 {t(item.label)}
               </button>
             ))}
-            <button className="w-full px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-lg">
-              {t('nav.hireMe')}
+            <button
+              onClick={() =>
+                window.open('public/images/CV-Doncan_Alejandro_Casquete.pdf',
+                '_blank',
+                'noopener,noreferrer')}
+              className="w-full px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-lg"
+            >
+              {t('nav.downloadCv')}
             </button>
+            <div className="fixed top-4 right-4 z-50">
+              <LanguageSelector />
+            </div>
           </div>
         </div>
       )}
