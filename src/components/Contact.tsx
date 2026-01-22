@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from 'react';
 import { socialLinks } from '../data/portfolio';
-import { Github, Linkedin, Twitter, Mail, Send, MapPin, Phone } from 'lucide-react';
+import { Github, Linkedin, Mail, Send, MapPin, Phone } from 'lucide-react';
+import { FaDiscord } from 'react-icons/fa6';
 import { useTranslation } from 'react-i18next';
 
 const Contact = () => {
@@ -32,7 +33,8 @@ const Contact = () => {
     const icons: { [key: string]: any } = {
       Github,
       Linkedin,
-      Mail
+      Discord: FaDiscord
+      
     };
     return icons[iconName] || Mail;
   };
@@ -44,15 +46,15 @@ const Contact = () => {
 
     try {
       const formData = new FormData(formRef.current!);
-      
+
       const response = await fetch('/', {
         method: 'POST',
-        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-        body: new URLSearchParams({
-          'form-name': 'contact',
-          ...Object.fromEntries(formData)
-        }).toString()
+        headers: {
+          'Content-Type': 'application/x-www-form-urlencoded',
+        },
+        body: new URLSearchParams(formData as any).toString(),
       });
+
 
       if (response.ok) {
         setSubmitStatus('success');
