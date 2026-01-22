@@ -12,7 +12,7 @@ export const projects: Project[] = [
     id: '1',
     title: 'projectsData.1.title',
     description: 'projectsData.1.description',
-    techStack: ['HTML', 'CSS', 'JavaScript'],
+    techStack: ['HTML', 'CSS', 'JavaScript', 'Hostinger'],
     image: '/images/RefriAlaska Projecto.png',
     category: 'projectsData.1.category',
     liveUrl: 'https://refrialaskavillavo.com',
@@ -32,11 +32,11 @@ export const projects: Project[] = [
     id: '3',
     title: 'projectsData.3.title',
     description: 'projectsData.3.description',
-    techStack: ['...', '...', '...'],
-    image: '/images/AppenProgreso.avif',
+    techStack: ['React', 'Tailwind CSS', 'Netlify'],
+    image: '/images/PortafolioWebProject.png',
     category: 'projectsData.3.category',
-    liveUrl: '',
-    githubUrl:''
+    liveUrl: 'https://cv-alejandro-casquete.netlify.app',
+    githubUrl:'https://github.com/alejo-20/Portafolio-WEB'
   },
   {
     id: '4',

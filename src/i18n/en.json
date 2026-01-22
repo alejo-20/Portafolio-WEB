@@ -117,9 +117,9 @@
       "category": "Full-stack web application - In progress"
     },
     "3": {
-      "title": "In development",
-      "description": "web project in progress",
-      "category": "SaaS/Driver"
+      "title": "Web Portfolio",
+      "description": "Professional portfolio to showcase projects, skills, and technical expertise. Component-based architecture, responsive design, and UX focus. Deployed on Netlify and updated from GitHub.",
+      "category": "Personal Web Project"
     },
     "4": {
       "title": "In development",
