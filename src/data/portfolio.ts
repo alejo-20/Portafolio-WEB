@@ -171,7 +171,7 @@ export const socialLinks: SocialLink[] = [
   },
   {
     platform: 'LinkedIn',
-    url: 'https://www.linkedin.com/in/alejandro-casquete-024092263/',
+    url: 'https://www.linkedin.com/in/doncan-alejandro-casquete-024092263/',
     icon: 'Linkedin'
   },
   {
